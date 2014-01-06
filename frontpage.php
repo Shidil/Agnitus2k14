@@ -2,14 +2,55 @@
 
 /* front page which contains logo*/
 
+	$now = time();
+	$config=array(	'targetDate' => array(	// Target countdown date
+		'day'				=> 14,
+		'month'				=> 2,
+		'year'				=> 2014,
+		'hour'				=> 9,
+		'minute'			=> 0,
+		'second'			=> 0
+	)
+	);
+	$target = mktime(
+		$config['targetDate']['hour'], 
+		$config['targetDate']['minute'], 
+		$config['targetDate']['second'], 
+		$config['targetDate']['month'], 
+		$config['targetDate']['day'], 
+		$config['targetDate']['year']
+	);
+
+	$diffSecs = $target - $now;
+
+	$date = array();
+	$date['secs'] = $diffSecs % 60;
+	$date['mins'] = floor($diffSecs/60)%60;
+	$date['hours'] = floor($diffSecs/60/60)%24;
+	$date['days'] = floor($diffSecs/60/60/24)%7;
+	$date['weeks']	= floor($diffSecs/60/60/24/7);
+	
+	foreach ($date as $i => $d) {
+		$d1 = $d%10;
+		$d2 = ($d-$d1) / 10;
+		$date[$i] = array(
+			(int)$d2,
+			(int)$d1,
+			(int)$d
+		);
+	}
 ?>
+
 <header id="home" class="header">
   
+  <div id="front_logo">
+  	<img src="images/front/logo_lights.png" id="logo_lights"/>
+  	<img src="images/front/layer1.png" id="logo_image"/>
+  </div>
+  		<h1>Agnitus 2k14</h1>
+		<h3>UNDER CONSTRUCTION</h1>
     <!-- Counter Container -->
     <div class="counter-container">
-		<h1>Agnitus 2k14</h1>
-		<h2>UNDER CONSTRUCTION</h1>
-		<h3 class="subtitle">Stay tuned for news and updates.</h2>
 
 		<!-- Countdown dashboard start
 		<div id="countdown_dashboard">
@@ -45,13 +86,10 @@
 
 		</div>
 		Countdown dashboard end -->
-		<div class="dev_comment">
-			This is a place holder for your comments.<br/>
-			This page has been tested with <br />IE 6, IE 7, IE 8, FF 3, Safari 4, Opera 9, Chrome 4
-		</div>
 
 
-		<script language="javascript" type="text/javascript">
+
+		<!--<script language="javascript" type="text/javascript">
 			jQuery(document).ready(function() {
 				$('#countdown_dashboard').countDown({
 					targetDate: {
@@ -68,7 +106,7 @@
 				$('#email_field').focus(email_focus).blur(email_blur);
 				$('#subscribe_form').bind('submit', subscribe_submit);
 			});
-		</script> 
+		</script> -->
       <div class="space50"></div>
       <div class="space200 hidden-phone"></div>
     </div>

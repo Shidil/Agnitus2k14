@@ -1,5 +1,47 @@
-h1,h2,h3 {
-	border:none;
-	color:#000;
+h1, h2, h3 {
+	border: none;
+}
+header#home {
+	background: #000;
+	background-position: center;
+	width: 100%;
+	min-height: 770px;
+}
+#front_logo {
+	height: 240px;
+	text-align: center;
+	background-position: center;
+	width: 420px;
+	margin: 0px auto;
+	padding-top: 0%;
+	position: relative;
+}
+#logo_lights {
+	position: absolute;
+	top: 30%;
+	left: -10%;
+	-webkit-transform: rotate(-35deg) scale(1.5);
+	opacity: 0;
+}
+#logo_image {
+	opacity: 0;
+}
+#lightbox_wrapper {
 
+}
+.event {
+	background: url(img/background/back-2.jpg) top center no-repeat #24A399;
+}
+#gallery_nite {
+	background: #7E2E71;
+}
+.img-container-image {
+position: relative;
+overflow: hidden;
+background: rgba(94, 92, 92, 0.72);
+-webkit-transition: 0.7s ease-in-out;
+-moz-transition: 0.7s ease-in-out;
+-ms-transition: 0.7s ease-in-out;
+-o-transition: 0.7s ease-in-out;
+transition: 0.7s ease-in-out;
 }
