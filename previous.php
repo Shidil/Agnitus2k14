@@ -44,7 +44,8 @@
 							echo '  
 							<li> 
 							<!-- Gallery Item -->
-							<article class="span4 project" data-tags="celebration,manners" id="gallery_"'.$name1.'>
+							<article class="span4 project 2k13gallery" data-tags="celebration,manners" id="gallery_"'.$name1.'
+							rel="'.$name1.'">
 							  <div class="img-container-image">
 								<!-- Image -->
 								<img src="gallery/'.$name1.'/thumb.jpg" alt="" />
