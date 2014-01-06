@@ -40,8 +40,7 @@
 <html>
 	<head>
 		<title>Agnitus 2k14</title>
-		<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
-		<script language="Javascript" type="text/javascript" src="js/misc.js"></script>
+
 		<link rel="Stylesheet" type="text/css" href="css/dark.css"></link>
 		<link rel="Stylesheet" type="text/css" href="css/style.css"></link>
 		  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -98,6 +97,7 @@
 
   <!-- Less JS -->
   <script type="text/javascript" src="js/less-1.3.3.min.js"></script>
+  <!-- JavaScripts -->
 
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	</head>
