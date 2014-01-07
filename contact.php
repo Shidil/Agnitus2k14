@@ -32,17 +32,18 @@
             <div class="span3">
               <h6>Address</h6>
               <p>
-                81 Sunnyvale Street<br />
-                Los Angeles, CA 90185<br />
-                United States
+                College of Engineering Thalassery<br />
+                Kundoormala PO Eranholi<br />
+                Thalassery <br/>
+                Kannur Dist. Kerala
               </p>
             </div>
             <div class="span3">
               <h6>Contact Us</h6>
               <p>
-                <i class="icon-phone"></i>+48 880 440 110<br />
-                <i class="icon-envelope-alt"></i><a href="mailto:info@example.com">info@example.com</a><br />
-                <i class="icon-home"></i><a href="http://www.example.com" rel="external">www.example.com</a>
+                <i class="icon-phone"></i>Phone<br />
+                <i class="icon-envelope-alt"></i><a href="agnitus2k14@gmail.com">info@example.com</a><br />
+                <i class="icon-home"></i><a href="http://www.agnitus.org" rel="external">www.agnitus.org</a>
               </p>
             </div>
           </div>  
@@ -50,8 +51,7 @@
           <div class="space40"></div> 
           
           <h6>Location</h6>
-          <iframe id="map" src="https://maps.google.sk/maps/ms?msa=0&amp;msid=210946297010027755543.0004c74af772bb9276d33&amp;ie=UTF8&amp;ll=48.576981,19.13117&amp;spn=0,0&amp;t=m&amp;output=embed"></iframe>
-        </div>
+ <iframe width="425" height="280" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.co.in/maps/ms?msa=0&amp;msid=216760218607614294401.0004d0d986ea7467bd4c5&amp;ie=UTF8&amp;t=m&amp;ll=11.787375,75.530319&amp;spn=0.094103,0.145912&amp;z=12&amp;output=embed"></iframe>        </div>
       </div>
     
       <div class="row space80"></div> 

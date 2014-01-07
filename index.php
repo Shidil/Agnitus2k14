@@ -6,6 +6,9 @@ include 'header.php';
 ?>
 
 <body data-spy="scroll" data-target=".navbar">
+	<div id="scroll_down">
+		
+	</div>
 	<div id="lightbox_wrapper">
 
 	</div>
@@ -33,6 +36,9 @@ include 'header.php';
 	<script type="text/javascript" src="js/raphael-min.js"></script>
 	<script type="text/javascript" src="js/jquery.lazylinepainter-1.4.1.min.js"></script>
 	<script type="text/javascript" src="js/gallery.js"></script>
+	
+	<script type="text/javascript" src="js/animations.js"></script>
+
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.js"></script>
 	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
@@ -61,7 +67,7 @@ include 'header.php';
 			// TimelineLite for title animation, then start up superscrollorama when complete
 			(new TimelineLite({
 				onComplete : loopAnimation
-			})).append([TweenMax.fromTo($('#logo_lights'), 2, {
+			})).append([TweenMax.fromTo($('#logo_lights'), 3, {
 				css : {
 					opacity : '0',
 					scaleX : '4',
@@ -73,7 +79,7 @@ include 'header.php';
 					scaleX : '1',
 					scaleY : '1'
 				},
-				ease : Quad.easeOut
+				ease : Bounce.easeOut
 			})/*, TweenMax.fromTo($('#logo_image'), 2, {
 			 css : {
 			 opacity : '0',

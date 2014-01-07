@@ -11,7 +11,7 @@
       
       <div class="row">  
         <div class="span12">
-          <h2>Previously on Agnitus</h2>
+          <h2>Competetions</h2>
           <!--<h4>There is something for everyone</h4>-->
         </div>
       </div>    
