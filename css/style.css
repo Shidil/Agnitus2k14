@@ -1,5 +1,5 @@
 h1, h2, h3 {
-	border: none;
+	border: 0;
 }
 header#home {
 	background: #000;
