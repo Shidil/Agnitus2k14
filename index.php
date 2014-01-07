@@ -1,7 +1,7 @@
 <?php
 
 /* bootstrap for website*/
-define('ROOT', 'c:/server/www/2k14/');
+define('ROOT', '/home/dcitsotj/public_html/agnitus.org/');
 include 'header.php';
 ?>
 
