@@ -1,16 +1,19 @@
 <?php
 include 'define.php';
+$rules = "";
+$description = "";
+$contact = "";
+$title="";
 if ($_POST) {
 
 	if ($_POST['type'] == "gallery") {
 		if ($_POST['item'] && $_POST['cat']) {
 
 			$path = ROOT . 'gallery/' . $_POST['cat'] . '/' . $_POST['item'];
-			echo $path;
 			if (file_exists($path . '/details.html')) {
 				$rules = "";
-				$description="";
-				$contact="";
+				$description = "";
+				$contact = "";
 				$doc = new DOMDocument();
 				$doc -> load($path . '/details.html');
 				$items = $doc -> getElementsByTagName('rules');
@@ -21,7 +24,15 @@ if ($_POST) {
 						$rules .= $tag1 -> nodeValue;
 					}
 				}
-								$items = $doc -> getElementsByTagName('contact');
+				$items = $doc -> getElementsByTagName('title');
+				if (count($items) > 0)//Only if tag1 items are found
+				{
+					foreach ($items as $tag1) {
+						// Do something with $tag1->nodeValue and save your modifications
+						$title .= $tag1 -> nodeValue;
+					}
+				}
+				$items = $doc -> getElementsByTagName('contact');
 				if (count($items) > 0)//Only if tag1 items are found
 				{
 					foreach ($items as $tag1) {
@@ -29,7 +40,7 @@ if ($_POST) {
 						$contact .= $tag1 -> nodeValue;
 					}
 				}
-								$items = $doc -> getElementsByTagName('description');
+				$items = $doc -> getElementsByTagName('description');
 				if (count($items) > 0)//Only if tag1 items are found
 				{
 					foreach ($items as $tag1) {
@@ -38,22 +49,22 @@ if ($_POST) {
 					}
 				}
 			}
-			
+
 			echo '<div class="lightbox_container">
 				<div class="lightbox_title">
-				
+				'.$title.'
 				</div>
 				<div class="lightbox_content">
 					<div class="lightbox_photo">
-						
+						<img src="'.$path.'/thumb.jpg" />
 					</div>
 					<div class="lightbox_details">
-						'.$description.'
+						' . $description . '<br/>'.$rules.'
 					</div>
 				</div>
 			</div>
 			';
-			
+
 		}
 	}
 }

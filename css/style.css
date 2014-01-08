@@ -63,3 +63,9 @@ header#home {
 .span3{
 	text-align: left;
 }
+lightbox_title {
+text-align: center;
+font-family: 'Oswald', sans-serif;
+font-size: 30px;
+line-height: 50px;
+}

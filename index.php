@@ -30,8 +30,8 @@ include 'header.php';
 	<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
 	<script language="Javascript" type="text/javascript" src="js/misc.js"></script>
 	<!-- Add fancyBox -->
-	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<link rel="stylesheet" href="fancybox/sources/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/sources/jquery.fancybox.pack.js?v=2.1.5"></script>
 	<script type="text/javascript" src="js/raphael-min.js"></script>
 	<script type="text/javascript" src="js/jquery.lazylinepainter-1.4.1.min.js"></script>
 	<script type="text/javascript" src="js/gallery.js"></script>
