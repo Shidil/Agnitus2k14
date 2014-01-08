@@ -1,13 +1,13 @@
 <?php
 
 /* bootstrap for website*/
-define('ROOT', 'c:/server/www/2k14/');
+include 'define.php';
 include 'header.php';
 ?>
 
 <body data-spy="scroll" data-target=".navbar">
 	<div id="scroll_down">
-		
+
 	</div>
 	<div id="lightbox_wrapper">
 
@@ -15,16 +15,15 @@ include 'header.php';
 	<?php
 	include 'frontpage.php';
 	?>
-
 	<div id='demo'></div>
 	<?php
 	include 'previous.php';
 	?>
 	<?php
-		include 'invitation.php';
- ?>
+	include 'invitation.php';
+	?>
 	<?php
-		include 'contact.php';
+	include 'contact.php';
 	?>
 	<!-- JavaScripts -->
 
@@ -36,9 +35,9 @@ include 'header.php';
 	<script type="text/javascript" src="js/raphael-min.js"></script>
 	<script type="text/javascript" src="js/jquery.lazylinepainter-1.4.1.min.js"></script>
 	<script type="text/javascript" src="js/gallery.js"></script>
-	
-	<script type="text/javascript" src="js/animations.js"></script>
 
+	<script type="text/javascript" src="js/animations.js"></script>
+	<script type="text/javascript" src="js/vertical.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.js"></script>
 	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
@@ -56,7 +55,6 @@ include 'header.php';
 	<script type="text/javascript" src="js/jquery.localScroll.js"></script>
 	<script type="text/javascript" src="js/functions.js"></script>
 	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/jquery.lettering-0.6.1.min.js"></script>
 	<script src="js/jquery.superscrollorama.js"></script>
 	<script>

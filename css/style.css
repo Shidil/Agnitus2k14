@@ -1,5 +1,11 @@
+h4{
+	font-size: 28px;
+}
 h1, h2, h3 {
 	border: none;
+}
+.span5{
+	font-size: 18px;
 }
 header#home {
 	background: #000;
@@ -52,6 +58,7 @@ header#home {
 	position: fixed;
 	opacity:0;
 	background-position: center;
+	z-index: 111;
 }
 .span3{
 	text-align: left;
