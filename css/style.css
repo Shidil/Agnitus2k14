@@ -1,10 +1,10 @@
-h4{
+h4 {
 	font-size: 28px;
 }
 h1, h2, h3 {
 	border: none;
 }
-.span5{
+.span5 {
 	font-size: 18px;
 }
 header#home {
@@ -56,23 +56,39 @@ header#home {
 	height: 110px;
 	width: 232;
 	position: fixed;
-	opacity:0;
+	opacity: 0;
 	background-position: center;
 	z-index: 111;
 }
-.span3{
+.span3 {
 	text-align: left;
 }
-lightbox_title {
-text-align: center;
-font-family: 'Oswald', sans-serif;
-font-size: 30px;
-line-height: 50px;
+.lightbox_title {
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+	font-size: 30px;
+	line-height: 50px;
 }
-lightbox_photo{
-position: absolute;
-width: 200px;
-height: 200px;
-top: 10%;
-left: 7%;
+.lightbox_photo {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	top: 10%;
+	left: 7%;
+}
+ul.section_ul {
+	list-style: none;
+	width: 98%;
+	height: 76%;
+	max-width: 1360px;
+	margin: 0 auto;
+	padding: 10% 0%;
+}
+ul.section_ul li {
+	width: 24%;
+	margin: 0px 0.5%;
+	float: left;
+}
+.chart_section {
+	background: rgb(37, 37, 37);
 }

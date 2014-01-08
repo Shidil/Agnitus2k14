@@ -3,7 +3,7 @@
 		<li>
 			<!-- Event category Item -->
 			<article class="event_category" data-tags="cs">
-				<div class="img-container-image event_category_img">
+				<div class="event_category_img">
 					<!-- Image -->
 					<img src="events/coding/thumb.jpg" alt="" />
 				</div>
@@ -25,7 +25,7 @@
 		<li>
 			<!-- Event category Item -->
 			<article class="event_category" data-tags="cs">
-				<div class="img-container-image event_category_img">
+				<div class="event_category_img">
 					<!-- Image -->
 					<img src="events/robotic/thumb.jpg" alt="" />
 				</div>
@@ -47,7 +47,7 @@
 		<li>
 			<!-- Event category Item -->
 			<article class="event_category" data-tags="cs">
-				<div class="img-container-image event_category_img">
+				<div class="event_category_img">
 					<!-- Image -->
 					<img src="events/circuits/thumb.jpg" alt="" />
 				</div>
@@ -69,7 +69,7 @@
 		<li>
 			<!-- Event category Item -->
 			<article class="event_category" data-tags="cs">
-				<div class="img-container-image event_category_img">
+				<div class="event_category_img">
 					<!-- Image -->
 					<img src="events/electric/thumb.jpg" alt="" />
 				</div>

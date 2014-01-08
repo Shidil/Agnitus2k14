@@ -14,6 +14,7 @@ include 'header.php';
 	</div>
 	<?php
 	include 'frontpage.php';
+	include 'event.php';
 	?>
 	<div id='demo'></div>
 	<?php
