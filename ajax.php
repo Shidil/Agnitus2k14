@@ -10,6 +10,7 @@ if ($_POST) {
 		if ($_POST['item'] && $_POST['cat']) {
 
 			$path = ROOT . 'gallery/' . $_POST['cat'] . '/' . $_POST['item'];
+			$dpath= 'gallery/' . $_POST['cat'] . '/' . $_POST['item'];
 			if (file_exists($path . '/details.html')) {
 				$rules = "";
 				$description = "";
@@ -56,7 +57,7 @@ if ($_POST) {
 				</div>
 				<div class="lightbox_content">
 					<div class="lightbox_photo">
-						<img src="'.$path.'/thumb.jpg" />
+						<img src="'.$dpath.'/thumb.jpg" />
 					</div>
 					<div class="lightbox_details">
 						' . $description . '<br/>'.$rules.'

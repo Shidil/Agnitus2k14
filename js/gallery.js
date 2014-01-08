@@ -24,8 +24,10 @@ jQuery('.2k13gallery div').live("click", function(event) {
         }
    		},
 		live		: false,
-		maxWidth	: 1000,
-		maxHeight	: 600,
+		maxWidth	: 1100,
+		minWidth	: 1000,
+		minHeight	: 550,
+		maxHeight	: 570,
 		fitToView	: false,
 		width		: '70%',
 		height		: '70%',

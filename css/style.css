@@ -69,3 +69,10 @@ font-family: 'Oswald', sans-serif;
 font-size: 30px;
 line-height: 50px;
 }
+lightbox_photo{
+position: absolute;
+width: 200px;
+height: 200px;
+top: 10%;
+left: 7%;
+}
