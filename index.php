@@ -18,7 +18,7 @@ include 'header.php';
 	?>
 	<div id='demo'></div>
 	<?php
-	include 'previous.php';
+	//include 'previous.php';
 	include 'nite.php';
 	?>
 	<?php
