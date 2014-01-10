@@ -85,12 +85,13 @@ ul.section_ul {
 	padding: 10% 0%;
 }
 ul.section_ul li {
-	width: 24%;
+	width: 8%;
 	margin: 0px 0.5%;
 	float: left;
 }
 .chart_section {
 	background: rgb(37, 37, 37);
+	height: 100%;
 }
 .nite_item {
 	width: 100%;
@@ -176,19 +177,90 @@ h2.title-1 {
 	width: auto;
 }
 article.event_category {
-	width: 1200px;
+	width: 7%;
+	float: left;
 	height: 100%;
 	overflow: hidden;
 }
 .event_category_img {
-	width: 320px;
-	position: absolute;
+	height: 100%;
+	width: 100px;
+	float: left;
 	background: #000;
+	margin-left: 0.5%;
+}
+.event_category_img img {
+	height: 100%;
 }
 .event_category_list {
-	height: 93%;
+	height: 100%;
 	position: relative;
-	margin-left: 320px;
 	background: rgba(0, 0, 0, 0.95);
 	z-index: 11;
+	float: left;
+	display: none;
+	width: 65%
+}
+.page_title {
+	height: 10%;
+	height: 10%;
+	color: #f5f7f6;
+	font-size: 2.6em;
+	line-height: 1.6em;
+	font-family: 'Oswald', sans-serif;
+	text-align: left;
+	margin: 0;
+	padding-left: 38px;
+	text-transform: uppercase;
+}
+.page_content {
+	height: 80%;
+}
+.page_foot {
+	height: 10%;
+}
+#events_content {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+div.event_category {
+	widows: 10%;
+}
+article.selected {
+	/*display:block;*/
+}
+article.removed {
+	/*display:none;*/
+}
+/*article.event_category_list {
+ -webkit-transition: width 0.5s ease-in-out, box-shadow 0.1s linear;
+ -moz-transition: width 0.5s ease-in-out, box-shadow 0.1s linear;
+ -o-transition: width 0.5s ease-in-out, box-shadow 0.1s linear;
+ -ms-transition: width 0.5s ease-in-out, box-shadow 0.1s linear;
+ transition: width 0.5s ease-in-out, box-shadow 0.1s linear;
+ }*/
+.event_list li {
+	float: left;
+}
+.event_list {
+	list-style: none;
+}
+span.event_category_title {
+	position: absolute;
+	margin-left: -206px;
+	margin-top: 206px;
+	width: 512px;
+	height: 60px;
+	-webkit-transform: rotate(-90deg);
+	text-align: left;
+	font-size: 57px;
+	font-family: monospace;
+	letter-spacing: 8px;
+	color: rgba(255, 255, 255, 0.93);
+	text-indent: 60px;
+	padding-top: 38px;
+	background: rgba(114, 114, 114, 0.25);
+}
+::-webkit-scrollbar {
+	display: none;
 }

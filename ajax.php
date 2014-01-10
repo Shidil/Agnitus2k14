@@ -9,8 +9,8 @@ if ($_POST) {
 	if ($_POST['type'] == "gallery") {
 		if ($_POST['item'] && $_POST['cat']) {
 
-			$path = ROOT . 'gallery/' . $_POST['cat'] . '/' . $_POST['item'];
-			$dpath= 'gallery/' . $_POST['cat'] . '/' . $_POST['item'];
+			$path = ROOT . 'events/' . $_POST['cat'] . '/' . $_POST['item'];
+			$dpath= 'events/' . $_POST['cat'] . '/' . $_POST['item'];
 			if (file_exists($path . '/details.html')) {
 				$rules = "";
 				$description = "";
