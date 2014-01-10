@@ -29,7 +29,7 @@
           <div class="row">  
             <div class="span5 offset6">
               <p>   
-                14.2.2014<br />
+                11.2.2014<br />
                 Start 9:00 am  
               </p>
             </div>

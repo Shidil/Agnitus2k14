@@ -44,14 +44,14 @@
 							echo '  
 							<li> 
 							<!-- Gallery Item -->
-							<article class="span4 project 2k13gallery" data-tags="celebration,manners" id="gallery_"'.$name1.'>
+							<article class="span4 project 2k13gallery" data-tags="celebration,manners" id="gallery_"'.$name1.' rel="tech">
 							  <div class="img-container-image" rel="'.$name1.'">
 								<!-- Image -->
 								<img src="gallery/tech/'.$name1.'/thumb.jpg" alt="" />
 								<!-- Item Link -->  
 								  <a href="img/gallery/01b.jpg" title="some text">
-								<!-- Icon -->  
-								<i class="icon-zoom-in"></i>
+								<!-- Icon   
+								<i class="icon-zoom-in"></i>  -->
 								</a>
 							</li>';
 							
@@ -107,14 +107,14 @@
 							echo '  
 							<li> 
 							<!-- Gallery Item -->
-							<article class="span4 project 2k13gallery" data-tags="celebration,manners" id="gallery_"'.$name1.'>
+							<article class="span4 project 2k13gallery" data-tags="celebration,manners" id="gallery_"'.$name1.' rel="other">
 							  <div class="img-container-image" rel="'.$name1.'">
 								<!-- Image -->
 								<img src="gallery/other/'.$name1.'/thumb.jpg" alt="" />
 								<!-- Item Link -->  
 								  <a href="img/gallery/01b.jpg" title="some text">
-								<!-- Icon -->  
-								<i class="icon-zoom-in"></i>
+								<!-- Icon   
+								<i class="icon-zoom-in"></i>  -->
 								</a>
 							</li>';
 							

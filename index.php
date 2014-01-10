@@ -1,44 +1,45 @@
 <?php
 
 /* bootstrap for website*/
-define('ROOT', '/home/dcitsotj/public_html/agnitus.org/');
+include 'define.php';
 include 'header.php';
 ?>
 
 <body data-spy="scroll" data-target=".navbar">
 	<div id="scroll_down">
-		
+
 	</div>
 	<div id="lightbox_wrapper">
 
 	</div>
 	<?php
 	include 'frontpage.php';
+	include 'event.php';
 	?>
-
 	<div id='demo'></div>
 	<?php
-	include 'previous.php';
+	//include 'previous.php';
+	include 'nite.php';
 	?>
 	<?php
-		include 'invitation.php';
- ?>
+	include 'invitation.php';
+	?>
 	<?php
-		include 'contact.php';
+	include 'contact.php';
 	?>
 	<!-- JavaScripts -->
 
 	<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
 	<script language="Javascript" type="text/javascript" src="js/misc.js"></script>
 	<!-- Add fancyBox -->
-	<link rel="stylesheet" href="fancybox/source/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
-	<script type="text/javascript" src="fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+	<link rel="stylesheet" href="fancybox/sources/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+	<script type="text/javascript" src="fancybox/sources/jquery.fancybox.pack.js?v=2.1.5"></script>
 	<script type="text/javascript" src="js/raphael-min.js"></script>
 	<script type="text/javascript" src="js/jquery.lazylinepainter-1.4.1.min.js"></script>
 	<script type="text/javascript" src="js/gallery.js"></script>
-	
-	<script type="text/javascript" src="js/animations.js"></script>
 
+	<script type="text/javascript" src="js/animations.js"></script>
+	<script type="text/javascript" src="js/vertical.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.js"></script>
 	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
@@ -56,7 +57,6 @@ include 'header.php';
 	<script type="text/javascript" src="js/jquery.localScroll.js"></script>
 	<script type="text/javascript" src="js/functions.js"></script>
 	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/jquery.lettering-0.6.1.min.js"></script>
 	<script src="js/jquery.superscrollorama.js"></script>
 	<script>

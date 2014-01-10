@@ -1,18 +1,95 @@
 
-jQuery('.2k13gallery div').bind("click", function(event) {
+/*
+ * 	Code for general purpose lightbox
+ * 	ajax lightbox
+ */
+$(document).ready(function() {
+	$('#events_content .event_category_img').live("click",function(event){
+		var article=$(this).parent().children("article");
+		$('article.selected').removeClass('selected');
+		$('article.event_category_list').addClass('removed');
+		$(article).removeClass('removed');
+		$(article).addClass('selected');
+		$(article).css('display','block');
+		(new TimelineLite({
+				onComplete : finishSwitch
+			})).append([TweenMax.fromTo($('article.removed'), 0.7, {
+				css : {
+					width : $('article.removed').css('width')
+				}
+			}, {
+				css : {
+					width : '0%'
+				},
+				ease : Quad.easeOut
+			}),TweenMax.fromTo($('article.removed ul'), 0.2, {
+				css : {
+					opacity : '1'
+				}
+			}, {
+				css : {
+					opacity : '0'
+				},
+				ease : Quad.easeOut
+			}), TweenMax.fromTo($('article.selected'), 0.79, {
+				css : {
+					width : '0%'
+				}
+			}, {
+				css : {
+					width : '65%'
+				},
+				ease : Quart.easeInOut
+			})]);
+			
+	});
+	function finishSwitch(){
+		/*$(article).addClass('selected');*/
+		$('article.removed').css('display','none');
+		$('article.removed ul').css('opacity','1');
+	}
+	
+});
+$(document).ready(function() {
+jQuery('.2k13gallery div').live("click", function(event) {
 	var rel = $(this).attr('rel');
+	var prel = $(this).parent().attr('rel');
 	show_lightbox(rel);
 	show_loading(rel);
 	$.post("ajax.php", {
 		type : "gallery",
 		item : rel,
-		cat  : "other"
+		cat  : prel
 	}).done(function(data) {
-		alert("Data Loaded: " + data);
+		$('.2k13gallery').fancybox({
+			 helpers : {
+        overlay : {
+            css : {
+                'background' : 'rgba(20, 19, 20, 0.89)'
+            }
+        }
+   		},
+		live		: false,
+		maxWidth	: 1100,
+		minWidth	: 1000,
+		minHeight	: 550,
+		maxHeight	: 570,
+		fitToView	: false,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'elastic',
+		closeEffect	: 'elastic',
+		content     : data
+	});
 	});
 });
-function show_lightbox(a) {
-	jQuery('#lightbox_wrapper').fadeIn(100);
+});
+
+
+function show_lightbox(a,da) {
+
 }
 
 function show_loading(a) {
