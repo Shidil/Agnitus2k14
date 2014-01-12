@@ -1,4 +1,4 @@
-<section class="chart_section" id="nite_container">
+<section class="chart_section" id="nite_container" style="height:110%;">
 
 	<article class="nite_item" id="thaikkudam_bridge">
 		<div class="nite_item_loading" style="">

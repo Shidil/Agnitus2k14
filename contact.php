@@ -15,15 +15,21 @@
     
       <div class="row">
         <div class="span6">
-          <h6>Contact Form</h6>
+          <h6>Register your participation now</h6>
           <!-- Contact Form -->  
           <form class="form-comment" method="post" action="#" />
             <input type="text" class="span6" name="mail" placeholder="E-mail *" value="" />
             <input type="text" class="span6" name="name" placeholder="Name" value="" />
-            <input type="text" class="span6" name="url" placeholder="URL" value="" />
-            <textarea class="span6" name="message" placeholder="Message *"></textarea>
+            <select class="span6" name="gender" placeholder="Select your gender">
+            	<option value="other">Select your gender</option>
+            	<option value="male">Male</option>
+            	<option value="female">Female</option>
+            </select>
+            <input type="date" class="span6" name="dob" placeholder="Date of birth" value="" />
+            <input type="text" class="span6" name="phone" placeholder="Contacr Number" value="" />
+            <textarea class="span6" name="address" placeholder="College Address *"></textarea>
             <div class="row space10"></div>
-            <button class="btn right">Send Message</button>
+            <button class="btn right">Register</button>
           </form>
           <!-- Contact Form End -->   
         </div>
