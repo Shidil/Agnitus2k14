@@ -3,7 +3,28 @@
 /* front page which contains logo*/
 
 ?>
-<header id="home" class="header parallax-viewport">
+<section id="page_presents" class="page">
+	<div class="viewport">
+		<div id="float_menu">
+			
+		</div>
+		<div id="presents_title">
+			
+		</div>
+		<div id="presents_logo">
+			<img src="images/front/layer1.png" />
+		</div>
+		<div id="presents_date">
+			
+		</div>
+		<div id="presents_register">
+			<a href="#register" style="color:#fff">Register Now</a>
+		</div>
+	</div>	
+</section>
+
+
+<?php /*<header id="home" class="header parallax-viewport">
   <div id="header_layer1" class="parallax-layer"></div>
   <div id="header_layer2"></div>
   <div id="front_logo">
@@ -32,6 +53,6 @@
     
     <!-- Menu Row  -->
 
-  </header>
-  <!-- Header End -->
+</header>
+  <!-- Header End -->*/?>
   

@@ -1,4 +1,36 @@
-<!-- Event -->
+<section id="page_info">
+	<div class="viewport">
+		<div id="info_know">
+			KNOW
+		</div>
+		<div id="info_about">
+			ABOUT
+		</div>
+		<div id="info_agnitus">
+			AGNITUS
+		</div>
+		<div id="info_globe"></div>
+		<div id="info_content_what">
+			<span class="title">What is Agnitus</span>
+			<span class="content">Agnitus 2K14 is a national level inter-collegiate techno extravaganza organized by College of engineering Thalassery</span>
+		</div>
+		<div id="info_content_when>
+			<span class="title">When is Agnitus</span>
+			<span class="content">Agnitus 2K14 gets launched on 11 february 2014 and keeps you tech till 12 february</span>
+		</div>
+		<div id="info_content_competetions">
+			<span class="title">Competetions</span>
+			<span class="content">ROBO PUGILISM<br/>ANDROID APP<br/>CODING<br/>LOS CIRCUTOS<br/>AND HELll OF A LOT MORE</span>
+		</div>
+		<div id="info_content_nite">
+			<span class="icon"></span>
+			<span class="title">Proshows</span>
+			<span class="content">DJ FERNANDES<br/>THAIKKUDAM BRIDGE<br/>BANDITS STUNTS<br/>& EVERY MINUTE</span>
+		</div>
+	</div>
+</section>
+
+<?php/*<!-- Event -->
 <div id="event" class="event">
 	<div class="container">
 
@@ -97,4 +129,5 @@
 
 	</div>
 </div>
-<!-- Event End-->
+<!-- Event End-->*/
+?>

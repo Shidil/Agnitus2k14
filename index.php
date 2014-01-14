@@ -6,27 +6,24 @@ include 'header.php';
 ?>
 
 <body data-spy="scroll" data-target=".navbar">
-	<div id="scroll_down">
+	<!--<div id="scroll_down">
 
-	</div>
-	<div id="lightbox_wrapper">
-
-	</div>
+	</div>-->
+	<div id="timeline">
 	<?php
 	include 'frontpage.php';
+	include 'invitation.php';
 	include 'event.php';
 	?>
-	<div id='demo'></div>
 	<?php
 	//include 'previous.php';
 	include 'nite.php';
 	?>
-	<?php
-	include 'invitation.php';
-	?>
+	<?php ?>
 	<?php
 	include 'contact.php';
 	?>
+	</div>
 	<!-- JavaScripts -->
 
 	<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
@@ -58,59 +55,7 @@ include 'header.php';
 	<script src="js/jquery.lettering-0.6.1.min.js"></script>
 	<script src="js/jquery.superscrollorama.js"></script>
 	<script src="js/jquery.parallax.min.js"></script>
-	
 	<script type="text/javascript" src="js/animations.js"></script>
-	<script>
-		$(document).ready(function() {
-
-			$('body').css('visibility', 'visible');
-
-			// TimelineLite for title animation, then start up superscrollorama when complete
-			(new TimelineLite({
-				onComplete : loopAnimation
-			})).append([TweenMax.fromTo($('#logo_lights'), 3, {
-				css : {
-					opacity : '0',
-					scaleX : '4',
-					scaleY : '4'
-				}
-			}, {
-				css : {
-					opacity : '0.7',
-					scaleX : '1',
-					scaleY : '1'
-				},
-				ease : Bounce.easeOut
-			})/*, TweenMax.fromTo($('#logo_image'), 2, {
-			 css : {
-			 opacity : '0',
-			 scaleX : '0',
-			 scaleY : '0'
-			 }
-			 }, {
-			 css : {
-			 opacity : '1',
-			 scaleX : '1',
-			 scaleY : '1'
-			 },
-			 ease : Quad.easeOut
-			 })*/]);
-			function loopAnimation() {
-				TweenMax.to($('#logo_lights'), 1, {
-					css : {
-						opacity : '0.7',
-						scaleX : '1.2',
-						scaleY : '1.2'
-					},
-					ease : Expo.easeIn,
-					repeat : -1,
-					yoyo : true
-				});
-			}
-
-		});
-
-	</script>
 </body>
 
 <?
