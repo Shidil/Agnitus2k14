@@ -48,7 +48,7 @@
               <h6>Contact Us</h6>
               <p>
                 <i class="icon-phone"></i>Phone<br />
-                <i class="icon-envelope-alt"></i><a href="mailto:agnitus2k14@gmail.com">agnitus2k14@gmail.com</a><br />
+                <i class="icon-envelope-alt"></i><a href="mailto:agnitus2k14@gmail.com">contact@agnitus.org</a><br />
                 <i class="icon-home"></i><a href="http://www.agnitus.org" rel="external">www.agnitus.org</a>
               </p>
             </div>

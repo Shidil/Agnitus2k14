@@ -69,11 +69,11 @@ $(document).ready(function() {
 				live : false,
 				maxWidth : 1100,
 				minWidth : 1000,
-				minHeight : 550,
-				maxHeight : 570,
+				minHeight : 400,
+				maxHeight : 500,
 				fitToView : false,
-				width : '70%',
-				height : '70%',
+				width : '1000px',
+				height : '450px%',
 				autoSize : false,
 				closeClick : false,
 				openEffect : 'elastic',
@@ -83,82 +83,33 @@ $(document).ready(function() {
 		});
 	});
 });
-
 $(document).ready(function() {
-	$('#diamond a').live("click", function(event) {
+	$('.lightbox_tabs li').live("click", function(event) {
+		var a=$(this);
+		var id = $(this).attr('rel');
+		var id1 = $('.lightbox_tabs li.selected').attr('rel');
+		$('#' + id1).fadeOut("swift", function() {
+			$('.lightbox_tabs li.selected').removeClass('selected');
+			$('#' + id).removeClass("hidden");
+			$('#' + id).fadeIn("slow");
+			$(a).addClass('selected');
+		});
+	});
+});
+$(document).ready(function() {
+	$('#events_tabs li.events_tab').live("click", function(event) {
 		var title = $(this).attr('title');
-		var top = parseInt($('#diamond').css('top')) / document.height * 100;
-		var left = parseInt($('#diamond').css('left')) / document.width * 100;
-		if (title == 'CIRKYUZONIA') {
-			if (left > 100) {
-				$('#diamond-small').fadeOut("slow");
-				$('ul#event_list').fadeOut("slow", function() {
-					$('#diamond').animate({
-						opacity : 1,
-						left : "50%",
-					}, 300, function() {
-					});
-				});
+		$('ul#event_list').fadeOut("slow", function() {
+			// ajax load lisst
+			$.post("ajax.php", {
+				type : "list",
+				cat : title
+			}).done(function(data) {
+				$('ul#event_list').html(data);
+				$('ul#event_list').fadeIn("slow");
+			});
+		});
 
-			} else
-				$('#diamond').animate({
-					opacity : 0.3,
-					left : "115%",
-				}, 300, function() {
-					// ajax load lisst
-					$.post("ajax.php", {
-						type : "list",
-						cat : title
-					}).done(function(data) {
-						$('ul#event_list').html(data);
-						// show the event list and diamond small
-						$('#diamond-small').fadeIn("slow");
-						$('ul#event_list').fadeIn("slow");
-					});
-				});
-		}
-		if (title == 'ROBOMANIA') {
-			if (left < 0)
-				$('#diamond').animate({
-					opacity : 1,
-					left : "50%",
-				}, 300, function() {
-				});
-			else
-				$('#diamond').animate({
-					opacity : 0.3,
-					left : "-16%",
-				}, 300, function() {
-				});
-		}
-		if (title == 'EL TEASORO') {
-			if (top < 0)
-				$('#diamond').animate({
-					opacity : 1,
-					top : "60%",
-				}, 300, function() {
-				});
-			else
-				$('#diamond').animate({
-					opacity : 0.3,
-					top : "-33%",
-				}, 300, function() {
-				});
-		}
-		if (title == 'PROGRA NOSTICAE') {
-			if (top > 100)
-				$('#diamond').animate({
-					opacity : 1,
-					top : "60%",
-				}, 300, function() {
-				});
-			else
-				$('#diamond').animate({
-					opacity : 0.3,
-					top : "140%",
-				}, 300, function() {
-				});
-		}
 	});
 });
 /*

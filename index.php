@@ -37,8 +37,6 @@ include 'header.php';
 	<script type="text/javascript" src="js/raphael-min.js"></script>
 	<script type="text/javascript" src="js/jquery.lazylinepainter-1.4.1.min.js"></script>
 	<script type="text/javascript" src="js/gallery.js"></script>
-
-	<script type="text/javascript" src="js/animations.js"></script>
 	<script type="text/javascript" src="js/vertical.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.js"></script>
@@ -59,6 +57,9 @@ include 'header.php';
 	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
 	<script src="js/jquery.lettering-0.6.1.min.js"></script>
 	<script src="js/jquery.superscrollorama.js"></script>
+	<script src="js/jquery.parallax.min.js"></script>
+	
+	<script type="text/javascript" src="js/animations.js"></script>
 	<script>
 		$(document).ready(function() {
 

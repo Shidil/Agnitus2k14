@@ -22,6 +22,7 @@ $rules = "";
 $description = "";
 $contact = "";
 $title = "";
+$prize = '';
 if ($_POST) {
 
 	if ($_POST['type'] == "event") {
@@ -67,6 +68,14 @@ if ($_POST) {
 						$description .= $tag1 -> nodeValue;
 					}
 				}
+				$items = $doc -> getElementsByTagName('prize');
+				if (count($items) > 0)//Only if tag1 items are found
+				{
+					foreach ($items as $tag1) {
+						// Do something with $tag1->nodeValue and save your modifications
+						$prize .= $tag1 -> nodeValue;
+					}
+				}
 			}
 
 			echo '<div class="lightbox_container">
@@ -77,19 +86,46 @@ if ($_POST) {
 					<div class="lightbox_photo">
 						<img src="' . $dpath . '/thumb.jpg" />
 					</div>
+					<ul class="lightbox_tabs">
+						<li class="selected" rel="lightbox_description">Description</li>
+						<li rel="lightbox_format">Format</li>
+						<li rel="lightbox_rules">Rules</li>
+						<li rel="lightbox_contact">Contact</li>
+					</ul>
 					<div class="lightbox_details">
-						' . $description . '<br/>' . $rules . '
+						<div class="lightbox_detail_content">
+							<div id="lightbox_description" class="visible">' . $description . '</div>
+							<div id="lightbox_format" class="hidden">  </div>
+							<div id="lightbox_rules" class="hidden">' . $rules . '</div>
+							<div id="lightbox_contact" class="hidden">' . $contact . '</div>
+						</div>
+						<div class="lightbox_event_prize"> Prize - ' . $prize . '</div>
 					</div>
 				</div>
 			</div>
 			';
 
 		}
-	}
-	elseif ($_POST['type'] == "list") {
-		if($_POST['cat']) {
+	} elseif ($_POST['type'] == "list") {
+		if ($_POST['cat']) {
 			//echo $cat;
 			printEventList($_POST['cat']);
+		}
+	} elseif ($_POST['type'] == 'register') {
+		if($_POST['email']&&$_POST['name']&&$_POST['gender']&&$_POST['phone']){			
+			// start registering
+			$name= $_POST['name'];
+			$email=$_POST['email'];
+			$gender=$_POST['gender'];
+			$phone=$_POST['phone'];
+			$college=$_POST['college'];
+			
+			// check validity prints true for success or false for failure/invalid input
+			
+			// build query
+			
+			
+			// Insert registration
 		}
 	}
 }
