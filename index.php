@@ -9,6 +9,7 @@ include 'header.php';
 	<!--<div id="scroll_down">
 
 	</div>-->
+	<div class="superscrollorama-pin-spacer" style="position: relative; top: 0px; left: -1363px; height: 10683px;"></div>
 	<div id="timeline">
 	<?php
 	include 'frontpage.php';

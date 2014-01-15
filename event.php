@@ -18,9 +18,40 @@ function printEventList($cat) {
 	}
 }
 ?>
-<section class="chart_section" id="events_container">
+
+<section id="page_competetions">
+	<div class="viewport">
+		<div id="competetion_bg"></div>
+		<div id="half_top"></div>
+		<div id="half_bottom"></div>
+		<div id="comp_title">COMPETETIONS</div>
+		<ul id="competetions_nav">
+			<li>PROGRA NOSTICAE</li>
+			<li>CIRKYUZONIA</li>
+			<li>ROBOMANIA</li>
+			<li>EL TEASORO</li>
+		</ul>
+		<ul id="competetions_list">
+			<li class="item item1" data-page="1">
+				<span  class="competetion_image">
+					
+				</span>
+				<span class="competetion_title"></span>
+			</li>
+			<li class="item item2" data-page="1"></li>
+			<li class="item item3" data-page="1"></li>
+			<li class="item item4" data-page="1"></li>
+			<li class="item item5" data-page="1"></li>
+			<li class="item item6" data-page="1"></li>
+			<li class="item item7" data-page="1"></li>
+			<li class="item item8" data-page="1"></li>
+		</ul>
+	</div>
+</section>
+
+<?php/*<section class="chart_section" id="events_container">
 	<div class="page_title" id="events_title">
-		Competetions
+		Competitions
 	</div>
 	<div class="page_quote" id="events_quote"></div>
 	<div class="page_content" id="events_content">
@@ -50,4 +81,5 @@ function printEventList($cat) {
 		</div>
 	</div>
 
-</section>
+</section>*/
+?>
