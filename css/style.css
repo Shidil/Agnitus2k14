@@ -6,6 +6,7 @@ html {
 	-ms-user-select: none;
 	user-select: none;
 }
+p
 body {
 	overflow: scroll;
 }
@@ -253,7 +254,8 @@ li.events_tab {
 	background: #7E2E71;
 }
 .img-container-image {
-	position: relative;
+	position: absolute;
+	z-index: 222;
 	overflow: hidden;
 	background: rgba(94, 92, 92, 0.72);
 	-webkit-transition: 0.7s ease-in-out;
@@ -520,8 +522,7 @@ ul#event_list {
 }
 #page_presents {
 	height: 100%;
-	position: relative;
-	background: url(../images/home-bg.jpg) 50% 50% no-repeat;
+	background: url(../images/front.jpg) 50% 98% no-repeat;
 	width: 100%;
 	z-index: 77
 }
@@ -740,9 +741,8 @@ ul#event_list {
 	text-shadow: 0px 0px 3px #A7A7A7;
 }
 #presents_cover {
-	z-index: 222;
+	/*z-index: 222;*/
 	height: 100%;
-	position: relative;
 	position: relative;
 }
 #cover_top {
@@ -773,10 +773,11 @@ ul#event_list {
 	color: #FFF;
 	width: 350px;
 	height: 200px;
-	font-size: 80px;
+	font-size: 123px;
 	opacity: 0;
-	top: 56%;
-	left: 35%;
+	top: 80%;
+	left: 14%;
+	z-index: 200;
 }
 #half_top {
 	background: url(../images/half_top.png) no-repeat;
@@ -786,6 +787,7 @@ ul#event_list {
 	top: 0;
 	left: 0;
 	margin-top: -1300px;
+	background-size: 100% 100%;
 }
 #half_bottom {
 	background: url(../images/half_bottom.png) no-repeat;
@@ -794,42 +796,101 @@ ul#event_list {
 	position: absolute;
 	top: 0;
 	left: 0;
+	z-index: 201;
 	margin-top: 1300px;
+	background-size: 100% 100%;
 }
 #competetion_bg {
-	background: rgb(2, 62, 128);
+	background: rgba(2, 62, 128, 0);
 	width: 100%;
 	height: 100%;
 	position: absolute;
 	opacity: 1;
 	top: -100%;
 }
-#shutter{
-	position:relative;
-	width:100%;
-	height:100%
-	z-index:
+#shutter {
+	position: relative;
+	width: 100%;
+	height: 100%;z-index;
 }
-#shutter_shape{
+.shutter_shape {
 	position: absolute;
-	background:url(../images/shutter.png) no-repeat;
+	background: url(../images/shutter.png) no-repeat;
 }
-#shutter_shape1{
-	background:url(../images/shutter.png) no-repeat;
-	background-position: 0%; /* to do */
+#shutter_shape1 {
+	background-position: 1px 491px;
+	width: 574px;
+	height: 515px;
 }
-#shutter_shape2{
-	
+#shutter_shape2 {
+	background-position: 1px 1px;
+	width: 569px;
+	height: 488px;
 }
-#shutter_shape3{
-	
+#shutter_shape3 {
+	background-position: 1153px 408px;
+	width: 412px;
+	height: 598px;
 }
-#shutter_shape4{
-	
+#shutter_shape4 {
+	background-position: 577px 492px;
+	width: 574px;
+	height: 514px;
 }
-#shutter_shape5{
-	
+#shutter_shape5 {
+	background-position: 572px 13px;
+	width: 555px;
+	height: 576px;
 }
-#shutter_shape6{
-	
+#shutter_shape6 {
+	background-position: 1567px 424px;
+	width: 401px;
+	height: 582px;
+}
+#competetions_list {
+	list-style: none;
+}
+#competetions_list li {
+	float: left;
+	top: -50%;
+}
+#competetions_list .item {
+	position: absolute;
+	z-index: 220;
+	opacity:0;
+}
+#competetions_list .item0 {
+	left: 14%;
+}
+#competetions_list .item1 {
+	left: 32%;
+}
+#competetions_list .item2 {
+	left: 50%;
+}
+#competetions_list .item3 {
+	left: 68%;
+}
+#competetions_list .item4 {
+	left: 14%;
+}
+#competetions_list .item5 {
+	left: 32%;
+}
+#competetions_list .item6 {
+	left: 50%;
+}
+#competetions_list .item7 {
+	left: 68%;
+}
+.img-container-frame {
+	position: absolute;
+	top: 98px;
+	z-index: 74;
+	width: 100%;
+	height: 204px;
+	background: url(../images/frame.png) no-repeat;
+}
+.img-container-frame.frame1 {
+	background-position: 0 -2483px;
 }

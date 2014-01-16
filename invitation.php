@@ -13,8 +13,8 @@
 		<div id="info_globe"></div>
 		<div id="info_content_what" class="info_content">
 			<span class="icon"></span>
-			<span class="title">What is Agnitus</span>
-			<span class="content">Agnitus 2K14 is a national level inter-collegiate techno extravaganza organized by College of engineering Thalassery</span>
+			<span class="title">About Agnitus</span>
+			<span class="content">Agnitus 2K14 is a national level inter-collegiate techno extravaganza organized yearly by College of engineering Thalassery</span>
 		</div>
 		<div id="info_content_when" class="info_content">
 			<span class="icon"></span>

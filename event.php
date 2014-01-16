@@ -1,19 +1,22 @@
 <?php
 
-function printEventList($cat) {
-	$yourStartingPath = ROOT . 'events/' . $cat;
+function printEventList($cat,$page='1') {
+	$yourStartingPath = ROOT . 'events/' . $cat;$section=1;
 	$directories = glob($yourStartingPath . '/*', GLOB_ONLYDIR);
-	foreach ($directories as $file) {
+	foreach ($directories as $key => $file) {
 		$name = strtolower(str_replace(" ", "-", $file));
 		$name = strtolower(str_replace($yourStartingPath . '/', "", $name));
 		$name1 = str_replace($yourStartingPath . '/', "", $file);
+		if($key==4) $section=2;
 		echo '  
-							<li> 
+							<li class="item item' . $key . '" rel="'.$page.'_'.$section.'"> 
 							<!-- Gallery Item -->
-							<article style="width:170px" class="span4 project 2k13gallery" data-tags="celebration,manners" id="gallery_"' . $name1 . ' rel="' . $cat . '">
+							<article style="width:170px;margin:0;position:relative;" class="span4 project 2k13gallery" data-tags="celebration,manners" id="gallery_"' . $name1 . ' rel="' . $cat . '">
 							  <div class="img-container-image" rel="' . $name1 . '">
-								<!-- Image -->
 								<img src="events/' . $cat . '/' . $name1 . '/thumb.jpg" alt="" />
+								</div>
+								<div class="img-container-frame"> </div>
+								</article>
 							</li>';
 	}
 }
@@ -24,62 +27,29 @@ function printEventList($cat) {
 		<div id="competetion_bg"></div>
 		<div id="half_top"></div>
 		<div id="half_bottom"></div>
-		<div id="comp_title">COMPETETIONS</div>
+		<div id="comp_title">
+			EVENTS
+		</div>
 		<ul id="competetions_nav">
-			<li>PROGRA NOSTICAE</li>
-			<li>CIRKYUZONIA</li>
-			<li>ROBOMANIA</li>
-			<li>EL TEASORO</li>
+			<li>
+				PROGRA NOSTICAE
+			</li>
+			<li>
+				CIRKYUZONIA
+			</li>
+			<li>
+				ROBOMANIA
+			</li>
+			<li>
+				EL TEASORO
+			</li>
 		</ul>
 		<ul id="competetions_list">
-			<li class="item item1" data-page="1">
-				<span  class="competetion_image">
-					
-				</span>
-				<span class="competetion_title"></span>
-			</li>
-			<li class="item item2" data-page="1"></li>
-			<li class="item item3" data-page="1"></li>
-			<li class="item item4" data-page="1"></li>
-			<li class="item item5" data-page="1"></li>
-			<li class="item item6" data-page="1"></li>
-			<li class="item item7" data-page="1"></li>
-			<li class="item item8" data-page="1"></li>
+			<?php printEventList('PROGRA NOSTICAE',1); ?>
+			<?php printEventList('CIRKYUZONIA',2); ?>
+			<?php printEventList('ROBOMANIA',3); ?>
+			<?php printEventList('EL TEASORO',4); ?>
 		</ul>
 	</div>
 </section>
 
-<?php/*<section class="chart_section" id="events_container">
-	<div class="page_title" id="events_title">
-		Competitions
-	</div>
-	<div class="page_quote" id="events_quote"></div>
-	<div class="page_content" id="events_content">
-		<div id="events_tabs">
-			<ul class="events_tabs_list">
-				<li class="events_tab" title="PROGRA NOSTICAE">
-					PROGRA NOSTICAE
-				</li>
-				<li class="events_tab" title="CIRKYUZONIA">
-					CIRKYUZONIA
-				</li>
-				<li class="events_tab" title="ROBOMANIA">
-					ROBOMANIA
-				</li>
-				<li class="events_tab" title="EL TEASORO">
-					EL TEASORO
-				</li>
-			</ul>
-		</div>
-		<div class="evens_page" id="events_page_container">
-			<ul id="event_list">
-				<li id="events_quote">
-					<span class="quote_line">"Competitive toughness is an acquired skill and not an inherited gift."</span>
-					<span class="quote_author"> - Chris Evert</span>
-				</li>
-			</ul>
-		</div>
-	</div>
-
-</section>*/
-?>

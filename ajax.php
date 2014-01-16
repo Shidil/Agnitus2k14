@@ -1,5 +1,11 @@
 <?php
 include 'define.php';
+function bbcode($input) {
+	$these = array('[b]', '[/b]', '[br/]');
+	$to = array('<b>', '</b>', '<br/>');
+	return (str_replace($these, $to, $input));
+}
+
 function printEventList($cat) {
 	$yourStartingPath = ROOT . 'events/' . $cat;
 	$directories = glob($yourStartingPath . '/*', GLOB_ONLYDIR);
@@ -77,7 +83,10 @@ if ($_POST) {
 					}
 				}
 			}
-
+			$rules = bbcode($rules);
+			$description = bbcode($description);
+			$contact = bbcode($contact);
+			$prize = bbcode($prize);
 			echo '<div class="lightbox_container">
 				<div class="lightbox_title">
 				' . $title . '
@@ -112,21 +121,26 @@ if ($_POST) {
 			printEventList($_POST['cat']);
 		}
 	} elseif ($_POST['type'] == 'register') {
-		if($_POST['email']&&$_POST['name']&&$_POST['gender']&&$_POST['phone']){			
+		if ($_POST['email'] && $_POST['name'] && $_POST['gender'] && $_POST['phone']) {
 			// start registering
-			$name= $_POST['name'];
-			$email=$_POST['email'];
-			$gender=$_POST['gender'];
-			$phone=$_POST['phone'];
-			$college=$_POST['college'];
-			
+			$name = $_POST['name'];
+			$email = $_POST['email'];
+			$gender = $_POST['gender'];
+			$phone = $_POST['phone'];
+			$college = $_POST['college'];
+			$dept = $_POST['dept'];
+			$accom = $_POST['accom'];
+			$dob = $_POST['dob'];
 			// check validity prints true for success or false for failure/invalid input
-			
+
 			// build query
-			
-			
+			$query = 'INSERT INTO `register` INSERT INTO `agnitus`.`register` ( `name`, `dob`, `college`, `phone`, `email`, `gender`, `department`, `accomodation`) values ("' . $name . '","' . $dob . '","' . $college . '",
+			"' . $phone . '","' . $email . '","' . $gender . '","' . $dept . '","' . $accom . '";';
 			// Insert registration
-		}
+			mysql_query($query);
+			echo 'true';
+		} else
+			echo 'false';
 	}
 }
 ?>
