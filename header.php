@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Agnitus 2k14</title>
+		<title>Agnitus 2K14 | National Level Inter-Collegiate Techno Extravaganza</title>
 		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
 		<link rel="Stylesheet" type="text/css" href="css/dark.css">
 		</link>
