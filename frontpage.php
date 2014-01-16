@@ -7,14 +7,14 @@
 		<!--<div id="cover_top"></div>
 		<div id="cover_bottom"></div>
 		<div id="shutter">
-			<div id="shutter_shape1" class="sprite shutter_shape"></div>
-			<div id="shutter_shape2" class="sprite shutter_shape"></div>
-			<div id="shutter_shape3" class="sprite shutter_shape"></div>
-			<div id="shutter_shape4" class="sprite shutter_shape"></div>
-			<div id="shutter_shape5" class="sprite shutter_shape"></div>
-			<div id="shutter_shape6" class="sprite shutter_shape"></div>
-		</div>
-	</div>-->
+		<div id="shutter_shape1" class="sprite shutter_shape"></div>
+		<div id="shutter_shape2" class="sprite shutter_shape"></div>
+		<div id="shutter_shape3" class="sprite shutter_shape"></div>
+		<div id="shutter_shape4" class="sprite shutter_shape"></div>
+		<div id="shutter_shape5" class="sprite shutter_shape"></div>
+		<div id="shutter_shape6" class="sprite shutter_shape"></div>
+		</div>-->
+	</div>
 	<div class="viewport parallax-viewport">
 		<div id="header_layer1" class="parallax-layer"></div>
 		<div id="header_layer2"></div>
@@ -22,11 +22,14 @@
 		<div id="float_menu">
 
 		</div>
-		<div id="presents_title">
-
-		</div>
+		<div id="presents_title"></div>
 		<div id="presents_logo">
-			<img src="images/front/layer1.png" />
+			<!--<div id="logo_container">
+				<div id="logo_left"></div>
+				<div id="logo_right"></div>
+				<div id="logo_center"></div>
+				<div id="logo_text"></div>
+			</div>-->
 		</div>
 		<div id="presents_date">
 

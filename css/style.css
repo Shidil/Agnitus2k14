@@ -535,17 +535,18 @@ ul#event_list {
 	left: 32%;
 	background: url(../images/presents.png) no-repeat;
 	background-size: 100%;
+	opacity: 0;
 }
 #presents_logo {
-	height: auto;
+	height: 100%;
 	text-align: center;
 	background-position: center;
-	width: 35%;
+	width: 100%;
 	margin: 0px auto;
 	padding-top: 0%;
-	position: absolute;
-	top: 138%;
-	left: 35%;
+	position: relative;
+	top: 0;
+	left: 0;
 	z-index: 20;
 }
 #presents_register {
@@ -857,7 +858,7 @@ ul#event_list {
 #competetions_list .item {
 	position: absolute;
 	z-index: 220;
-	opacity:0;
+	opacity: 0;
 }
 #competetions_list .item0 {
 	left: 14%;
@@ -893,4 +894,59 @@ ul#event_list {
 }
 .img-container-frame.frame1 {
 	background-position: 0 -2483px;
+}
+#competetions_nav_container {
+	position: absolute;
+	top: 5%;
+	left: 15%;
+	width: 70%;
+	height: 100px;
+}
+#competetions_nav {
+	list-style: none;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	position: relative;
+}
+#competetions_nav li {
+	float: left;
+	padding: 10px;
+	position: absolute;
+	top: -15%;
+	opacity: 0;
+	color: #fff;
+	z-index: 500;
+	font-size: 20px;
+}
+#logo_container {
+	position: absolute;
+	height: 56%;
+	width: 29%;
+	top: 31%;
+	left: 38%;
+}
+#logo_left {
+	background: url(../images/logo/layers/left.png);
+	position: absolute;
+	width: 45px;
+	height: 313px;
+}
+#logo_right {
+	background: url(../images/logo/layers/right.png);
+	position: absolute;
+	width: 239px;
+	height: 243px;
+}
+#logo_center {
+	background: url(../images/logo/layers/diamond.png);
+	position: absolute;
+	width: 88px;
+	height: 89px;
+}
+#logo_text {
+	background: url(../images/logo/layers/text.png);
+	position: absolute;
+	width: 390px;
+	height: 374px;
 }

@@ -51,6 +51,7 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
 	jQuery('.2k13gallery div').live("click", function(event) {
+
 		var rel = $(this).attr('rel');
 		var prel = $(this).parent().attr('rel');
 		$.post("ajax.php", {
@@ -58,6 +59,7 @@ $(document).ready(function() {
 			item : rel,
 			cat : prel
 		}).done(function(data) {
+
 			$('.2k13gallery').fancybox({
 				helpers : {
 					overlay : {
