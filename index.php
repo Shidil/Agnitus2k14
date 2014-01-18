@@ -6,9 +6,8 @@ include 'header.php';
 ?>
 
 <body data-spy="scroll" data-target=".navbar">
-	<!--<div id="scroll_down">
-
-	</div>-->
+	<div id="scroll_down">
+	</div>
 	<div class="superscrollorama-pin-spacer" style="position: relative; top: 0px; left: -1363px; height: 10683px;"></div>
 	<div id="timeline">
 	<?php
@@ -57,6 +56,7 @@ include 'header.php';
 	<script src="js/jquery.superscrollorama.js"></script>
 	<script src="js/jquery.parallax.min.js"></script>
 	<script type="text/javascript" src="js/animations.js"></script>
+	<script src="js/jquery.smooth-scroll.min.js"></script>
 </body>
 
 <?

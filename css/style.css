@@ -50,12 +50,14 @@ header#home {
 	background-size: 123%;
 	top: 0%;
 	left: 1%;
+	/*z-index: 99;*/
 }
 #header_layer2 {
-	background: rgba(0,0,0,0.26);
+	background: rgba(0,0,0,0.35);
 	position: absolute;
 	width: 100%;
 	height: 100%;
+	/*z-index: 99;*/
 }
 #top_light {
 	width: 429px;
@@ -313,14 +315,23 @@ ul.section_ul li {
 	width: 100%;
 	height: 50%;
 	margin: 10px 0px;
+	position: absolute;
+	opacity: 0;
 }
 #thaikkudam_bridge {
 	background: url(../gallery/other/bridge/bg.jpg) no-repeat;
 	background-position: bottom;
+	top: -100%;
 }
 #bandits_stunts {
 	background: url(../gallery/other/bandits/bg.jpg) no-repeat;
 	background-position: bottom;
+	top: 170%;
+}
+#dj_show {
+	background: url(../gallery/other/dj/bg.jpg) no-repeat;
+	background-position: bottom;
+	top: 170%;
 }
 .nite_item_details {
 	position: absolute;
@@ -522,7 +533,7 @@ ul#event_list {
 }
 #page_presents {
 	height: 100%;
-	background: url(../images/front.jpg) 50% 98% no-repeat;
+	background: url(../images/front_bg.jpg) 50% 98% no-repeat;
 	width: 100%;
 	z-index: 77
 }
@@ -547,7 +558,15 @@ ul#event_list {
 	position: relative;
 	top: 0;
 	left: 0;
-	z-index: 20;
+}
+#presents_date{
+	width: 200px;
+	height: 67px;
+	font-size:20px;
+	color:#fff;
+	bottom:2%;
+	left:2%;
+	position:absolute;
 }
 #presents_register {
 	border-radius: 50%;
@@ -558,9 +577,9 @@ ul#event_list {
 	font-size: 19px;
 	vertical-align: middle;
 	position: absolute;
-	z-index: 30;
+	z-index: 100;
 	bottom: 5%;
-	right: 5%;
+	right: -38%;
 	color: #FFF;
 	padding-top: 33px;
 	font-family: 'Unica One';
@@ -581,8 +600,8 @@ ul#event_list {
 	transition: all 0.5s ease-out;
 }
 #float_menu {
-	width: 80px;
-	height: 80px;
+	width: 50px;
+	height: 50px;
 	background: url(../images/menu.png) no-repeat;
 	position: absolute;
 	top: 1%;
@@ -590,6 +609,7 @@ ul#event_list {
 	background-size: 65%;
 	background-position: center;
 	cursor: pointer;
+	z-index:100;
 }
 .viewport {
 	position: absolute;
@@ -677,6 +697,7 @@ ul#event_list {
 .info_content span.content {
 	color: #999;
 	text-align: justify;
+	font-size: 13px;
 }
 .info_content span.title {
 	color: #fff;
@@ -922,31 +943,143 @@ ul#event_list {
 #logo_container {
 	position: absolute;
 	height: 56%;
-	width: 29%;
-	top: 31%;
-	left: 38%;
+	width: 27%;
+	top: 27%;
+	left: 36%;
+	z-index: 101;
 }
 #logo_left {
 	background: url(../images/logo/layers/left.png);
 	position: absolute;
+	height: 314px;
 	width: 45px;
-	height: 313px;
+	background-repeat: no-repeat;
+	top: 61px;
+	left: -157%;
 }
 #logo_right {
 	background: url(../images/logo/layers/right.png);
 	position: absolute;
 	width: 239px;
+	top: 90px;
 	height: 243px;
+	left: 237%;
 }
 #logo_center {
 	background: url(../images/logo/layers/diamond.png);
 	position: absolute;
 	width: 88px;
 	height: 89px;
+	left: 137px;
+	/*top: 166px;*/
+	top: 166%;
+	opacity: 0;
 }
 #logo_text {
 	background: url(../images/logo/layers/text.png);
 	position: absolute;
 	width: 390px;
 	height: 374px;
+	left: -8px;
+	opacity: 0;
+}
+#logo_ag1 {
+	background: url(../images/logo/layers/ag1.png);
+	position: absolute;
+	width: 53px;
+	height: 54px;
+	/*top: 378px;*/
+	top: -200%;
+	left: 55px;
+	opacity: 0;
+}
+#logo_ag2 {
+	background: url(../images/logo/layers/ag2.png);
+	position: absolute;
+	width: 52px;
+	height: 82px;
+	/*top: 340px;*/
+	top: 200%;
+	left: 106px;
+	opacity: 0;
+}
+#logo_ag3 {
+	background: url(../images/logo/layers/ag3.png);
+	position: absolute;
+	width: 54px;
+	height: 64px;
+	/*top: 315px;*/
+	top: -200%;
+	left: 156px;
+	opacity: 0;
+}
+#logo_ag4 {
+	background: url(../images/logo/layers/ag4.png);
+	position: absolute;
+	width: 53px;
+	height: 74px;
+	/*top: 274px;*/
+	top: 200%;
+	left: 209px;
+	opacity: 0;
+}
+#logo_ag5 {
+	background: url(../images/logo/layers/ag5.png);
+	position: absolute;
+	width: 53px;
+	height: 75px;
+	/*top: 242px;*/
+	top: -200%;
+	left: 260px;
+	opacity: 0;
+}
+#logo_ag6 {
+	background: url(../images/logo/layers/ag6.png);
+	position: absolute;
+	width: 50px;
+	height: 61px;
+	/*top: 224px;*/
+	top: 200%;
+	left: 311px;
+	opacity: 0;
+}
+#logo_splits {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	margin-left: 36px;
+	margin-top: -9px;
+}
+#page_contact {
+	/*background: #fff;*/
+	width: 100%;
+	z-index: 150;
+	top: 150%;
+	height: 100%;
+	position: absolute;
+}
+#page_nite {
+	/*background: #fff;*/
+	width: 100%;
+	/*z-index: 100;*/
+	top: 0%;
+	height: 100%;
+	position: absolute;
+}
+select.span6 {
+	width: 99.5%;
+	text-indent: 10px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 500;
+	font-size: 15px;
+	-webkit-font-smoothing: antialiased;
+	color: #373737 !important;
+	background: #f0f0f0;
+	margin-top: 10px;
+	padding: 8px 0px !important;
+	border: 1px solid #cccccc;
+	border-radius: 0px;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }

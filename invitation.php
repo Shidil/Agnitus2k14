@@ -14,22 +14,22 @@
 		<div id="info_content_what" class="info_content">
 			<span class="icon"></span>
 			<span class="title">About Agnitus</span>
-			<span class="content">Agnitus 2K14 is a national level inter-collegiate techno extravaganza organized yearly by College of engineering Thalassery</span>
+			<span class="content">Ever since it's inception back in 2012, Agnitus has managed to live up to it's name and upto the reputation of our college with rejuvenating energy and endless enthusiasm. With each year, it has been emerging and evolving as one of South India's largest and grandest technical festivals.</span>
 		</div>
 		<div id="info_content_when" class="info_content">
 			<span class="icon"></span>
 			<span class="title">When is Agnitus</span>
-			<span class="content">Agnitus 2K14 gets launched on 11 february 2014 and keeps you tech till 12 february</span>
+			<span class="content">This year's round of Bot wars, coding streaks, crazy circuitry, paper presentations and never ending applause kicks off on the 11th of February. Amidst prize give-aways and endless celebrations, the event-curtain falls on the eve of the 12th of February.</span>
 		</div>
 		<div id="info_content_participate" class="info_content">
 			<span class="icon"></span>
 			<span class="title">Participate</span>
-			<span class="content">College of Engineering Thalassery welcomes all techies to Agnitus. Participate by registering for Agnitus</span>
+			<span class="content">All men aren't born as engineers. It is emotion that drives innovation. All are invited to Agnitus 2k14, not just to project out your own acumen in technology, but also to feel, cheer and join the applause and celebration here at Thalassery. To join..</span>
 		</div>
 		<div id="info_content_competetions" class="info_content">
 			<span class="icon"></span>
 			<span class="title">Competetions</span>
-			<span class="content">ROBO PUGILISM<br/>ANDROID APP<br/>CODING<br/>LOS CIRCUTOS<br/>AND HELll OF A LOT MORE</span>
+			<span class="content">Competitiveness is an innate biological  which coexist along with the urge for survival. It has existed in the human society since the upper paleolithic perioed. It is not the old times wherein sword fights and hand-fought battles were the only competitions among men.  </span>
 		</div>
 		<div id="info_content_nite" class="info_content">
 			<span class="icon"></span>
