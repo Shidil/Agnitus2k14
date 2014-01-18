@@ -7,26 +7,23 @@ include 'header.php';
 
 <body data-spy="scroll" data-target=".navbar">
 	<div id="scroll_down">
-
 	</div>
-	<div id="lightbox_wrapper">
-
-	</div>
+	<div class="superscrollorama-pin-spacer" style="position: relative; top: 0px; left: -1363px; height: 10683px;"></div>
+	<div id="timeline">
 	<?php
 	include 'frontpage.php';
+	include 'invitation.php';
 	include 'event.php';
 	?>
-	<div id='demo'></div>
 	<?php
 	//include 'previous.php';
 	include 'nite.php';
 	?>
-	<?php
-	include 'invitation.php';
-	?>
+	<?php ?>
 	<?php
 	include 'contact.php';
 	?>
+	</div>
 	<!-- JavaScripts -->
 
 	<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
@@ -37,8 +34,6 @@ include 'header.php';
 	<script type="text/javascript" src="js/raphael-min.js"></script>
 	<script type="text/javascript" src="js/jquery.lazylinepainter-1.4.1.min.js"></script>
 	<script type="text/javascript" src="js/gallery.js"></script>
-
-	<script type="text/javascript" src="js/animations.js"></script>
 	<script type="text/javascript" src="js/vertical.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="js/jquery.easing.js"></script>
@@ -59,57 +54,9 @@ include 'header.php';
 	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
 	<script src="js/jquery.lettering-0.6.1.min.js"></script>
 	<script src="js/jquery.superscrollorama.js"></script>
-	<script>
-		$(document).ready(function() {
-
-			$('body').css('visibility', 'visible');
-
-			// TimelineLite for title animation, then start up superscrollorama when complete
-			(new TimelineLite({
-				onComplete : loopAnimation
-			})).append([TweenMax.fromTo($('#logo_lights'), 3, {
-				css : {
-					opacity : '0',
-					scaleX : '4',
-					scaleY : '4'
-				}
-			}, {
-				css : {
-					opacity : '0.7',
-					scaleX : '1',
-					scaleY : '1'
-				},
-				ease : Bounce.easeOut
-			})/*, TweenMax.fromTo($('#logo_image'), 2, {
-			 css : {
-			 opacity : '0',
-			 scaleX : '0',
-			 scaleY : '0'
-			 }
-			 }, {
-			 css : {
-			 opacity : '1',
-			 scaleX : '1',
-			 scaleY : '1'
-			 },
-			 ease : Quad.easeOut
-			 })*/]);
-			function loopAnimation() {
-				TweenMax.to($('#logo_lights'), 1, {
-					css : {
-						opacity : '0.7',
-						scaleX : '1.2',
-						scaleY : '1.2'
-					},
-					ease : Expo.easeIn,
-					repeat : -1,
-					yoyo : true
-				});
-			}
-
-		});
-
-	</script>
+	<script src="js/jquery.parallax.min.js"></script>
+	<script type="text/javascript" src="js/animations.js"></script>
+	<script src="js/jquery.smooth-scroll.min.js"></script>
 </body>
 
 <?

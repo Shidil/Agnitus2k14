@@ -1,119 +1,83 @@
 <?php
 
 /* front page which contains logo*/
-
-	$now = time();
-	$config=array(	'targetDate' => array(	// Target countdown date
-		'day'				=> 14,
-		'month'				=> 2,
-		'year'				=> 2014,
-		'hour'				=> 9,
-		'minute'			=> 0,
-		'second'			=> 0
-	)
-	);
-	$target = mktime(
-		$config['targetDate']['hour'], 
-		$config['targetDate']['minute'], 
-		$config['targetDate']['second'], 
-		$config['targetDate']['month'], 
-		$config['targetDate']['day'], 
-		$config['targetDate']['year']
-	);
-
-	$diffSecs = $target - $now;
-
-	$date = array();
-	$date['secs'] = $diffSecs % 60;
-	$date['mins'] = floor($diffSecs/60)%60;
-	$date['hours'] = floor($diffSecs/60/60)%24;
-	$date['days'] = floor($diffSecs/60/60/24)%7;
-	$date['weeks']	= floor($diffSecs/60/60/24/7);
-	
-	foreach ($date as $i => $d) {
-		$d1 = $d%10;
-		$d2 = ($d-$d1) / 10;
-		$date[$i] = array(
-			(int)$d2,
-			(int)$d1,
-			(int)$d
-		);
-	}
 ?>
-
-<header id="home" class="header">
-  
-  <div id="front_logo">
-  	<img src="images/front/logo_lights.png" id="logo_lights"/>
-  	<img src="images/front/layer1.png" id="logo_image"/>
-  </div>
-  		<h1>Agnitus 2k14</h1>
-		<h3>UNDER CONSTRUCTION</h1>
-    <!-- Counter Container -->
-    <div class="counter-container">
-
-		<!-- Countdown dashboard start
-		<div id="countdown_dashboard">
-			<div class="dash weeks_dash">
-				<span class="dash_title">weeks</span>
-				<div class="digit"><?=$date['weeks'][0]?></div>
-				<div class="digit"><?=$date['weeks'][1]?></div>
-			</div>
-
-			<div class="dash days_dash">
-				<span class="dash_title">days</span>
-				<div class="digit"><?=$date['days'][0]?></div>
-				<div class="digit"><?=$date['days'][1]?></div>
-			</div>
-
-			<div class="dash hours_dash">
-				<span class="dash_title">hours</span>
-				<div class="digit"><?=$date['hours'][0]?></div>
-				<div class="digit"><?=$date['hours'][1]?></div>
-			</div>
-
-			<div class="dash minutes_dash">
-				<span class="dash_title">minutes</span>
-				<div class="digit"><?=$date['mins'][0]?></div>
-				<div class="digit"><?=$date['mins'][1]?></div>
-			</div>
-
-			<div class="dash seconds_dash">
-				<span class="dash_title">seconds</span>
-				<div class="digit"><?=$date['secs'][0]?></div>
-				<div class="digit"><?=$date['secs'][1]?></div>
-			</div>
+<section id="page_presents" class="page">
+	<!--<div id="presents_cover">
+		<div id="cover_top"></div>
+		<div id="cover_bottom"></div>
+		<div id="shutter">
+		<div id="shutter_shape1" class="sprite shutter_shape"></div>
+		<div id="shutter_shape2" class="sprite shutter_shape"></div>
+		<div id="shutter_shape3" class="sprite shutter_shape"></div>
+		<div id="shutter_shape4" class="sprite shutter_shape"></div>
+		<div id="shutter_shape5" class="sprite shutter_shape"></div>
+		<div id="shutter_shape6" class="sprite shutter_shape"></div>
+		</div>
+	</div>-->
+	<div class="viewport parallax-viewport">
+		<div id="header_layer1" class="parallax-layer"></div>
+		<div id="header_layer2" class="parallax-layer"></div>
+		<div id="top_light" class="parallax-layer1"></div>
+		<div id="float_menu">
 
 		</div>
-		Countdown dashboard end -->
+		<div id="presents_title"></div>
+		<div id="presents_logo">
+			<div id="logo_container">
+				<div id="logo_left"></div>
+				<div id="logo_right"></div>
+				<div id="logo_center"></div>
+				<div id="logo_text"></div>
+				<div id="logo_splits">
+					<div id="logo_ag1"></div>
+					<div id="logo_ag2"></div>
+					<div id="logo_ag3"></div>
+					<div id="logo_ag4"></div>
+					<div id="logo_ag5"></div>
+					<div id="logo_ag6"></div>
+				</div>
 
+			</div>
+		</div>
+		<div id="presents_date">
+				website under construction
+		</div>
+		<div id="presents_register">
+			<a href="#page_contact" style="color:#fff">Register Now</a>
+		</div>
+	</div>
+</section>
 
+<?php /*<header id="home" class="header parallax-viewport">
+	 <div id="header_layer1" class="parallax-layer"></div>
+	 <div id="header_layer2"></div>
+	 <div id="front_logo">
+	 <!--<img src="images/front/logo_lights.png" id="logo_lights"/>-->
+	 <img src="images/front/layer1.png" id="logo_image"/>
+	 </div>
+	 <div id="facebook"></div>
+	 <div id="register">REGISTER</div>
+	 <div id="fireball"></div>
+	 <div id="top_light" class="parallax-layer1"></div>
+	 <div id="date">Feb 11-12 2014</div>
+	 <!--<div id="front_nav"><ul class="header_nav">
+	 <li>Home</li>
+	 <li>Events</li>
+	 <li>ProShow</li>
+	 <li>About</li>
+	 <li>Register</li>
+	 </ul></div>-->
+	 <!-- Counter Container -->
+	 <div class="counter-container">
 
-		<!--<script language="javascript" type="text/javascript">
-			jQuery(document).ready(function() {
-				$('#countdown_dashboard').countDown({
-					targetDate: {
-						'day': 		<?=$config['targetDate']['day']?>,
-						'month': 	<?=$config['targetDate']['month']?>,
-						'year': 	<?=$config['targetDate']['year']?>,
-						'hour': 	<?=$config['targetDate']['hour']?>,
-						'min': 		<?=$config['targetDate']['minute']?>,
-						'sec': 		<?=$config['targetDate']['second']?>
-					}
-				});
-				
-				// Subscription functions
-				$('#email_field').focus(email_focus).blur(email_blur);
-				$('#subscribe_form').bind('submit', subscribe_submit);
-			});
-		</script> -->
-      <div class="space50"></div>
-      <div class="space200 hidden-phone"></div>
-    </div>
-    <!-- Counter Container End -->
-    
-    <!-- Menu Row  -->
+	 <div class="space50"></div>
+	 <div class="space200 hidden-phone"></div>
+	 </div>
+	 <!-- Counter Container End -->
 
-  </header>
-  <!-- Header End -->
-  
+	 <!-- Menu Row  -->
+
+	 </header>
+	 <!-- Header End -->*/
+?>
