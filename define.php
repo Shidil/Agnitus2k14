@@ -1,3 +1,3 @@
 <?php
-define('ROOT', 'c:/server/www/2k14/');
+define('ROOT', '/home/dcitsotj/public_html/agnitus.org/');
 ?>
