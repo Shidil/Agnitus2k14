@@ -1,22 +1,12 @@
+$(document).ready(function(e) {
+	$('#presents_register').click(function(e){
+		TweenMax.to($('body'), 9, {scrollTop:8000,ease:Linear.easeInOut});
+});
+});
 $(document).ready(function() {
-	$('#presents_regster a').on('click', function() {
-		$.smoothScroll({
-		offset: 6900,
-		easing: 'swing',
-		speed: 2000,
-		scrollElement: $('div.superscrollorama-pin-spacer'),
-		scrollTarget: link.hash
-		});
-		return false;
-	});
-	
-	
 	$('body').css('visibility', 'visible');
 	function blabla(){
 		$('#competetion_bg').fadeIn("fast");
-	}
-	function addItemTween(item){
-		
 	}
 	// title animations 
 	$("#presents_title").css({scale:1,opacity:1});
@@ -46,15 +36,14 @@ $(document).ready(function() {
 	function scrollIn(){
 	(new TimelineLite({
 			onComplete : initScrollAnimations})).append([
-			TweenMax.to($('#presents_register'), .75, {css:{right: "5%"}, ease:Quad.easeOut}),
-			TweenMax.fromTo($('#scroll_down'), 0.8, {css : {opacity : '0',top : '78%',left : '-20%'}}, {css : {opacity : '0.7',top : '78%',left : '64%'},ease : Quad.easeOut})
+			TweenMax.to($('#presents_register'), .6, {css:{right: "5%"}, ease:Quad.easeOut}),
+			TweenMax.to($('#scroll_down'), 0.5,{css : {opacity : '0.7',top : '78%',left : '64%'},ease : Quad.easeOut})
 			]);
 	}
 	function loopScrollDown() {
 		TweenMax.to($('#scroll_down'), 0.5, {
 			css : {
 				height : $('#scroll_down').height() + 30
-				//margin : '6px 0px'
 			},
 			ease : Quart.easeIn,
 			repeat : -1,
@@ -64,7 +53,10 @@ $(document).ready(function() {
 	// Scroll Animations
 	function initScrollAnimations() {
 	loopScrollDown();
-	var controller = $.superscrollorama();
+	var controller = $.superscrollorama({
+			triggerAtCenter: false,
+			
+		});
 	///controller.addTween(10, TweenMax.to($('#fireball'), 0.9, {css:{top: "100%",right:"100%",scale:1}, ease:Quad.easeOut}),200);
 	//controller.addTween(10, TweenMax.to($('#cover_top'), .75, {css:{top: -1600}, ease:Quad.easeOut}),1200);
 	//controller.addTween(13, TweenMax.to($('#cover_bottom'), .75, {css:{top: +1600}, ease:Quad.easeOut}),1200);
@@ -81,13 +73,13 @@ $(document).ready(function() {
 							 TweenMax.to($('#info_agnitus'), .6, {css:{left: "52%",opacity:1}, ease:Circ.easeOut}),
 							 TweenMax.to($('#info_globe'), .6, {css:{top: "18%",opacity:1}, ease:Quad.easeOut})
 						]),
-					700 // scroll duration of tween
+					400 // scroll duration of tween
 				);
-		controller.addTween(1500, TweenMax.to($('#competetion_bg'), .2, {css:{top: "0%"}, ease:Quad.easeOut}),30);		
+		controller.addTween(1100, TweenMax.to($('#competetion_bg'), .2, {css:{top: "0%"}, ease:Quad.easeOut}),30);		
 		$('.info_content').each(function() {
 					controller.addTween(1000, TweenMax.from( $(this), 0.8, {delay:Math.random()*.2,css:{left:Math.random()*1200-600,top:Math.random()*600-300,opacity:0}, ease:Quart.easeOut}),200);
 				});
-		controller.addTween(1800, TweenMax.to($('#page_info'), 1, {css:{top: "-100%"}, ease:Quad.easeOut}),400);
+		controller.addTween(1600, TweenMax.to($('#page_info'), 1, {css:{top: "-100%"}, ease:Quad.easeOut}),400);
 		controller.addTween(
 					2000,
 					(new TimelineLite())
@@ -99,63 +91,63 @@ $(document).ready(function() {
 				);
 		controller.addTween(2000,TweenMax.to($('#comp_title'), 6, {css:{top: "30%",opacity:1,zIndex:255}, ease:Quad.easeOut}),200);
 		$('#competetions_nav').find('li').each(function() {
-			controller.addTween(2500, TweenMax.to( $(this), Math.random()*.2, {delay:Math.random()*.2,css:{top:"0%",opacity:1}, ease:Quart.easeOut}),400);
+			controller.addTween(2500, TweenMax.to( $(this), Math.random()*.2, {delay:Math.random()*.2,css:{top:"0%",opacity:1}, ease:Quart.easeOut}),200);
 				});		
-		controller.addTween(2700,TweenMax.to($('#comp_title'), 0.6, {css:{top: "130%",opacity:0}, ease:Quad.easeOut}),400);	
+		controller.addTween(2700,TweenMax.to($('#comp_title'), 0.6, {css:{top: "130%",opacity:0}, ease:Quad.easeOut}),0);	
 		// cat1
 		$('#competetions_list').find('li[rel=1_2]').each(function() {
-			controller.addTween(2800, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),400);
+			controller.addTween(2800, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=1_1]').each(function() {
-					controller.addTween(2800, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),400);
+					controller.addTween(2800, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
 				});	
 		$('#competetions_list').find('li[rel=1_2]').each(function() {
-			controller.addTween(3300, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),400);
+			controller.addTween(3300, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=1_1]').each(function() {
-					controller.addTween(3300, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),400);
+					controller.addTween(3300, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
 				});	
 		// cat 2
 		$('#competetions_list').find('li[rel=2_2]').each(function() {
-			controller.addTween(3400, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),400);
+			controller.addTween(3400, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=2_1]').each(function() {
-					controller.addTween(3400, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),400);
+					controller.addTween(3400, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
 				});	
 		$('#competetions_list').find('li[rel=2_2]').each(function() {
-			controller.addTween(3900, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),400);
+			controller.addTween(3900, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=2_1]').each(function() {
-					controller.addTween(3900, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),400);
+					controller.addTween(3900, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
 				});	
 		// cat3	
 		$('#competetions_list').find('li[rel=3_2]').each(function() {
-			controller.addTween(4000, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),400);
+			controller.addTween(4000, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=3_1]').each(function() {
-					controller.addTween(4000, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),400);
+					controller.addTween(4000, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
 				});	
 		$('#competetions_list').find('li[rel=3_2]').each(function() {
-			controller.addTween(4500, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),400);
+			controller.addTween(4500, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=3_1]').each(function() {
-					controller.addTween(4500, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),400);
+					controller.addTween(4500, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
 				});	
 		//cat 4
 		$('#competetions_list').find('li[rel=4_2]').each(function() {
-			controller.addTween(4600, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),400);
+			controller.addTween(4600, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=4_1]').each(function() {
-					controller.addTween(4600, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),400);
+					controller.addTween(4600, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
 				});	
 		$('#competetions_list').find('li[rel=4_2]').each(function() {
-			controller.addTween(5100, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),400);
+			controller.addTween(5100, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=4_1]').each(function() {
-					controller.addTween(5100, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),400);
+					controller.addTween(5100, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
 				});	
 				$('#competetions_nav').find('li').each(function() {
-		controller.addTween(5300, TweenMax.to( $(this), Math.random()*.2, {delay:Math.random()*.2,css:{top:"-50%",opacity:0}, ease:Quart.easeOut}),400);
+		controller.addTween(5300, TweenMax.to( $(this), Math.random()*.2, {delay:Math.random()*.2,css:{top:"-50%",opacity:0}, ease:Quart.easeOut}),0);
 				});		
 		controller.addTween(
 					5300,
@@ -164,7 +156,7 @@ $(document).ready(function() {
 							 TweenMax.to($('#half_top'), 0.6, {css:{marginTop: "-1300px",opacity:0}, ease:Quad.easeOut}),
 							 TweenMax.to($('#half_bottom'), 0.6, {css:{marginTop: "1300px",opacity:0}, ease:Quad.easeOut})
 						]),
-					400 // scroll duration of tween
+					300 // scroll duration of tween
 				);
 		controller.addTween(
 					5400,
@@ -203,5 +195,11 @@ $(document).ready(function() {
 
 // frontpage parallax
 $(document).ready(function() {
-	jQuery('.parallax-layer').parallax({mouseport:$("#page_presents")});
+    $(document).one('scroll',function(e) {
+
+        //Keep scolling ico appears when start scrolling
+        TweenMax.to( $('#scroll_down'), 1, {css:{opacity:0},onComplete:function(){TweenMax.killTweensOf($("#scroll_down"));}});
+		
+	});
+	//jQuery('.parallax-layer').parallax({mouseport:$("#page_presents")});
 });

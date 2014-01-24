@@ -6,9 +6,10 @@ html {
 	-ms-user-select: none;
 	user-select: none;
 }
-p
+
 body {
 	overflow: scroll;
+	cursor:url(../images/cursor.cur),auto;
 }
 .hidden {
 	display: none;
@@ -218,10 +219,10 @@ li.events_tab {
 	float: left;
 	color: #666;
 	padding: 10px;
-	-webkit-transition: all 0.6s ease-in-out;
-	-o-transition: all 0.6s ease-in-out;
-	-ms-transition: all 0.6s ease-in-out;
-	transition: all 0.6s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	-ms-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
 }
 .lightbox_tabs li.selected {
 	background: #D80000;
@@ -236,7 +237,7 @@ li.events_tab {
 	position: absolute;
 	top: 35%;
 	left: 32%;
-	width: 50%;
+	width: 56%;
 	text-align: left;
 	height: 50%;
 }
@@ -274,6 +275,8 @@ li.events_tab {
 	opacity: 0;
 	background-position: center;
 	z-index: 111;
+	top:78%;
+	left:-20%;
 }
 .span3 {
 	text-align: left;
@@ -290,6 +293,10 @@ li.events_tab {
 	height: 200px;
 	top: 20%;
 	left: 5%;
+}
+#lightbox_description{
+height: 260px;
+overflow-y: scroll;
 }
 ul.section_ul {
 	list-style: none;
@@ -317,6 +324,7 @@ ul.section_ul li {
 	margin: 10px 0px;
 	position: absolute;
 	opacity: 0;
+	background-size: 100% !important;
 }
 #thaikkudam_bridge {
 	background: url(../gallery/other/bridge/bg.jpg) no-repeat;
@@ -389,7 +397,7 @@ h2.title-1 {
 	position: absolute;
 	left: 0;
 	top: 0;
-	background: url('http://static.zippergaleria.com.br/static/images/exposicoes/bg_loading.png?1372856462') repeat 0 0;
+	/*background: url('http://static.zippergaleria.com.br/static/images/exposicoes/bg_loading.png?1372856462') repeat 0 0;*/
 	z-index: 102;
 }
 .nite_item_loading .loading {
@@ -909,12 +917,23 @@ ul#event_list {
 	position: absolute;
 	top: 98px;
 	z-index: 74;
-	width: 100%;
+	width: 110%;
 	height: 204px;
 	background: url(../images/frame.png) no-repeat;
 }
 .img-container-frame.frame1 {
 	background-position: 0 -2483px;
+}
+.event_container_title{
+top: 162px;
+width: 187px;
+font-size: 15px;
+text-align: center;
+color: #fff;
+position: absolute;
+z-index: 80;
+height: 20px;
+line-height: 21px;
 }
 #competetions_nav_container {
 	position: absolute;
@@ -944,7 +963,7 @@ ul#event_list {
 	position: absolute;
 	height: 56%;
 	width: 27%;
-	top: 27%;
+	top: 23%;
 	left: 36%;
 	z-index: 101;
 }
@@ -1082,4 +1101,63 @@ select.span6 {
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none;
+}
+#register_message{
+	-webkit-transition: all 0.6s ease-in-out;
+	-o-transition: all 0.6s ease-in-out;
+	-ms-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+width:400px;height:30px;font-size:15px;color:green;position:absolute;display:none;bottom:8%;left:11%;
+}
+form{
+overflow: hidden;
+}
+#register_loading{
+	width:40px;
+	height:15px;
+	position:absolute;
+	bottom:8%; left:15%;
+	display:none;
+	background:url(../images/loading/gif) no-repeat;
+	background-size:100%;
+}
+.img-container-image img {
+-webkit-transition: 0.7s ease-in-out;
+-moz-transition: 0.7s ease-in-out;
+-ms-transition: 0.7s ease-in-out;
+-o-transition: 0.7s ease-in-out;
+transition: 0.7s ease-in-out;
+max-width: 100%;
+height: auto;
+min-width: 187px;
+height: 164px;
+}
+.datepick-month-header select, .datepick-month-header input {
+height: 1.4em;
+border: none;
+font-size: 100%;
+padding: 0;
+width: auto;
+}
+li.contactlist_cat {
+line-height: 20px;
+width: 20%;
+float: left;
+}
+.contactlist_item{
+text-align: left;
+margin: 30px 0px;
+}
+.contactlist_title{
+border-bottom: 1px solid #FD1010;
+height: 27px;
+margin: 0px 6px;
+
+}
+.contactlist_title h6{
+line-height: 26px;
+font-size: 15px;
+}
+ul.contactlist{
+padding-left: 10px;
 }

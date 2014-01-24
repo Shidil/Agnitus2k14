@@ -1,0 +1,12 @@
+# php_value memory_limit 64M
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /2k14/
+RewriteRule ^events/([^/]+)$ /2k14/eventlist.php?cat=$1 [L]
+RewriteRule ^events/([^/]+)/$ /2k14/eventlist.php?cat=$1 [L]
+#RewriteRule ^events/([^/]+)/([^/]+)/$ /2k14/index.php?cat=$1&event=$2 [L]
+#RewriteRule ^events/([^/]+)/([^/]+)$ /2k14/index.php?cat=$1&event=$2 [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+</IfModule>
+# BEGIN WordPress

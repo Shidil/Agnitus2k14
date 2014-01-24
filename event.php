@@ -18,6 +18,7 @@ function printEventList($cat, $page = '1') {
 								<img src="events/' . $cat . '/' . $name1 . '/thumb.jpg" alt="" />
 								</div>
 								<div class="img-container-frame"> </div>
+								<div class="event_container_title">'.$name1.'</div>
 								</article>
 							</li>';
 	}
@@ -44,7 +45,7 @@ function printEventList($cat, $page = '1') {
 					ROBOMANIA
 				</li>
 				<li style="left:75%">
-					EL TEASORO
+					NOE FRICZIONAI
 				</li>
 			</ul>
 		</div>
@@ -52,7 +53,7 @@ function printEventList($cat, $page = '1') {
 			<?php printEventList('PROGRA NOSTICAE', 1); ?>
 			<?php printEventList('CIRKYUZONIA', 2); ?>
 			<?php printEventList('ROBOMANIA', 3); ?>
-			<?php printEventList('EL TEASORO', 4); ?>
+			<?php printEventList('NOE FRICZIONAI', 4); ?>
 		</ul>
 	</div>
 </section>

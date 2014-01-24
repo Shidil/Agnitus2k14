@@ -123,6 +123,7 @@ if ($_POST) {
 	} elseif ($_POST['type'] == 'register') {
 		if ($_POST['email'] && $_POST['name'] && $_POST['gender'] && $_POST['phone']) {
 			// start registering
+			
 			$name = $_POST['name'];
 			$email = $_POST['email'];
 			$gender = $_POST['gender'];
@@ -134,13 +135,25 @@ if ($_POST) {
 			// check validity prints true for success or false for failure/invalid input
 
 			// build query
-			$query = 'INSERT INTO `register` INSERT INTO `agnitus`.`register` ( `name`, `dob`, `college`, `phone`, `email`, `gender`, `department`, `accomodation`) values ("' . $name . '","' . $dob . '","' . $college . '",
-			"' . $phone . '","' . $email . '","' . $gender . '","' . $dept . '","' . $accom . '";';
+			$query ='INSERT INTO register ( name, dob, college, phone, email, gender, department, accomodation) VALUES (:name,:dob,:college,:phone,:email,:gender,:dept,:accom)';
+			//$query = "INSERT INTO register  ( name, dob, college, phone, email, gender, department, accomodation) VALUES ('$name','$dob','$college','$phone','$email','$gender','$dept','$accom')";
 			// Insert registration
-			mysql_query($query);
-			echo 'true';
+			//chmod('manage',777);
+			$dbh= new PDO('sqlite:manage/register.db');
+			$dbh->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+			//$dbhandle = sqlite_open('manage/register.db', 0666, $error);
+			if (!$dbh) die ('false');
+			try{
+				$stmt=$dbh->prepare($query);
+				$stmt->execute(array(':name'=>$name,':dob'=>$dob,':college'=>$college,':phone'=>$phone,':email'=>$email,':gender'=>$gender,':dept'=>$dept,':accom'=>$accom));
+				//$dbh->exec($query);
+			}
+			catch(PDOException $e){
+				die($e);
+			}
+			die('true');
 		} else
-			echo 'false';
+			die ('false');
 	}
 }
 ?>
