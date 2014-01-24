@@ -3,6 +3,16 @@
 		<title>Agnitus 2K14 | National Level Inter-Collegiate Techno Extravaganza</title>
 		<script type="text/javascript" src="<?php echo DOMAIN; ?>js/jquery-1.8.3.min.js"></script>
 		<script src="<?php echo DOMAIN; ?>js/jquery.queryloader2.min.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
+		<script src="js/jquery.lettering-0.6.1.min.js"></script>
+		<script src="js/jquery.superscrollorama.js"></script>
+		<script type="text/javascript" src="js/animations.js"></script>
+		<script src="js/jquery-ui-1.10.4.custom.min.js"></script>
+		<script type="text/javascript" src="js/gallery.js"></script>
+		<link rel="stylesheet" href="fancybox/sources/jquery.fancybox.css?v=2.1.5" type="text/css" media="screen" />
+		<script type="text/javascript" src="fancybox/sources/jquery.fancybox.pack.js?v=2.1.5"></script>
+		<script src="js/jquery.nicescroll.min.js"></script>
+		<script src="js/jquery.datepick.min.js"></script>
 		<link rel="Stylesheet" type="text/css" href="<?php echo DOMAIN; ?>css/dark.css">
 		</link>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -64,9 +74,4 @@
 		<!-- JavaScripts -->
 		<META HTTP-EQUIV="Pragma" CONTENT="no-cache">
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<script>
-		$(document).ready(function () {
-			$("body").queryLoader2();
-		});
-		</script>
 	</head>

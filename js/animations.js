@@ -4,16 +4,21 @@ $(document).ready(function(e) {
 });
 });
 $(document).ready(function() {
-	$('body').css('visibility', 'visible');
+$("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
+	
 	function blabla(){
 		$('#competetion_bg').fadeIn("fast");
 	}
-	// title animations 
-	$("#presents_title").css({scale:1,opacity:1});
+	function titleAnim(){
+	$('body').css('visibility', 'visible');
+		$("#presents_title").css({scale:1,opacity:1});
 	(new TimelineLite({onComplete:logoIn})).append([
 		TweenMax.from($('#presents_title'), 0.7, {delay:0.5,css : {scale : 0},ease : Quad.easeInOut}),
 		TweenMax.to($('#presents_title'), 0.5, {delay:1.5,css : {top : "-50%"/*scale:2*/,opacity:0},ease : Quad.easeInOut})
 		]);
+	}
+	// title animations 
+
 	//(new TimelineLite()).append([TweenMax.to($('#presents_title'), 0.5, {delay:1,css : {top : "-50%"/*scale:2*/,opacity:0},ease : Quad.easeInOut})]);
 	
 	// Logo Animation
