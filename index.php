@@ -2,6 +2,16 @@
 
 /* bootstrap for website*/
 include 'define.php';
+require_once 'Mobile_Detect.php';
+$detect = new Mobile_Detect;
+ 
+// Any mobile device (phones or tablets).
+$detect->setUserAgent('BlackBerry7100i/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103');
+if ( $detect->isMobile() ) 
+{
+	include 'mobile.php';
+	die();
+}
 include 'header.php';
 ?>
 
@@ -15,7 +25,9 @@ top: 0px;
 left: 0px;
 min-height: 8000px;
 width: 100%;"></div>
+	
 	<div id="timeline">
+	<div id="timeline_overlay"></div>
 	<?php
 		include 'frontpage.php';
 		include 'invitation.php';
@@ -24,33 +36,11 @@ width: 100%;"></div>
 		include 'contact.php';
 		//include 'previous.php';
 	?>
+	<div id="copyright">
+		<span id="copyright_text">© 2014 Agnitus.org</span>
+		<span id="sponsored">Powered by <a href="http://dCitsie.com">dCitsie</a></span>
 	</div>
-	<!-- JavaScripts -->
-	
-	<!-- Add fancyBox -->
-
-	<!--<script type="text/javascript" src="js/raphael-min.js"></script>
-	<script type="text/javascript" src="js/jquery.lazylinepainter-1.4.1.min.js"></script>-->
-	<!--<script type="text/javascript" src="js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="js/jquery.easing.js"></script>
-	<script type="text/javascript" src="js/jquery.isotope.min.js"></script>
-	<!--<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-	<script type="text/javascript" src="js/jquery.refineslide.js"></script>
-	<script type="text/javascript" src="js/jquery.parallax-1.1.3.js"></script>
-	<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
-	<script type="text/javascript" src="js/retina.js"></script>
-	<script type="text/javascript" src="js/animate.js"></script>
-	<script type="text/javascript" src="js/jquery.fitvids.js"></script>
-	<script type="text/javascript" src="js/sly.js"></script>
-	<script type="text/javascript" src="js/scale.fix.js"></script>-->
-	<!--<script type="text/javascript" src="js/jquery.countdown.js"></script>
-	<script type="text/javascript" src="js/jquery.scrollTo.js"></script>
-	<script type="text/javascript" src="js/jquery.localScroll.js"></script>
-	<script type="text/javascript" src="js/functions.js"></script>-->
-	<!--<script src="js/jquery.parallax.min.js"></script>-->
-
-	<!--<script src="js/jquery.smooth-scroll.min.js"></script>-->
-
+	</div>
 		<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

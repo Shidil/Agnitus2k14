@@ -1,6 +1,6 @@
 $(document).ready(function(e) {
 	$('#presents_register').click(function(e){
-		TweenMax.to($('body'), 9, {scrollTop:8000,ease:Linear.easeInOut});
+		TweenMax.to($('body'), 9, {scrollTop:7000,ease:Linear.easeInOut});
 });
 });
 $(document).ready(function() {
@@ -32,16 +32,17 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 	  	TweenMax.to($('#logo_ag5'), 1, {delay:0.1,css : {left : "260px",top:"242px",opacity:1},ease : Quad.easeOut}),
 	  	TweenMax.to($('#logo_ag6'), 1, {delay:0.1,css : {left : "311px",top:"224px",opacity:1},ease : Quad.easeOut}),
 	  	TweenMax.to($('#logo_center'), 0.4, {delay:0.1,css : {top:"166px",opacity:1},ease : Quad.easeOut}),
-	  	//TweenMax.to($('#logo_center'), 0.5, {delay:0.6,css : {rotate:360},ease : Quad.easeOut}),
-		TweenMax.fromTo($('#logo_left'), 0.6, {delay:0.2,css : {left : "-150%",opacity:0},ease : Quad.easeOut},{css : {left : "61px",opacity:1},ease : Quart.easeOut}),
-		TweenMax.fromTo($('#logo_right'), 0.6, {delay:0.2,css : {left : "+150%",opacity:0},ease : Quad.easeOut},{css : {left : "137px",opacity:1},ease : Quart.easeOut}),
+		TweenMax.to($('#logo_left'), 0.6, {css : {left : "61px",opacity:1},ease : Quart.easeOut}),
+		TweenMax.to($('#logo_right'), 0.6, {css : {left : "137px",opacity:1},ease : Quart.easeOut}),
 		TweenMax.to($('#logo_text'), 1, {delay:0.6,css : {opacity:1},ease : Quad.easeOut})
 		]);
 	}
 	function scrollIn(){
 	(new TimelineLite({
 			onComplete : initScrollAnimations})).append([
-			TweenMax.to($('#presents_register'), .6, {css:{right: "5%"}, ease:Quad.easeOut}),
+			TweenMax.to($('#presents_register'), .5, {css:{right: "5%"}, ease:Quad.easeOut}),
+			TweenMax.to($('#presents_facebook'), .5, {css:{left: "5%"}, ease:Quad.easeOut}),
+			TweenMax.to($('#copyright'), .4, {css:{bottom: "0%"}, ease:Quad.easeOut}),
 			TweenMax.to($('#scroll_down'), 0.5,{css : {opacity : '0.7',top : '78%',left : '64%'},ease : Quad.easeOut})
 			]);
 	}
@@ -68,6 +69,7 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 	//controller.addTween(140, TweenMax.to($('#presents_title'), .75, {css:{top: -600}, ease:Quad.easeOut}),400);
 	controller.addTween(200, TweenMax.to($('#logo_container'), .9, {css:{top: "-138%"}, ease:Quad.easeOut}),400);
 	controller.addTween(220, TweenMax.to($('#presents_register'), .75, {css:{right: "-38%"}, ease:Quad.easeOut}),200);
+	controller.addTween(220, TweenMax.to($('#presents_facebook'), .75, {css:{left: "-38%"}, ease:Quad.easeOut}),200);
 	controller.addTween(300, TweenMax.to($('#page_info'), .7, {css:{top: "0%"}, ease:Quad.easeOut}),400);
 	controller.addTween(
 					550,
@@ -75,12 +77,12 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 						.append([
 							 TweenMax.to($('#info_know'), .456, {css:{left: "29%",opacity:1}, ease:Circ.easeOut}),
 							 TweenMax.to($('#info_about'), .6, {css:{top: "10%",opacity:1}, ease:Circ.easeOut}),
-							 TweenMax.to($('#info_agnitus'), .6, {css:{left: "52%",opacity:1}, ease:Circ.easeOut}),
+							 TweenMax.to($('#info_agnitus'), .6, {css:{left: "54%",opacity:1}, ease:Circ.easeOut}),
 							 TweenMax.to($('#info_globe'), .6, {css:{top: "18%",opacity:1}, ease:Quad.easeOut})
 						]),
 					400 // scroll duration of tween
 				);
-		controller.addTween(1100, TweenMax.to($('#competetion_bg'), .2, {css:{top: "0%"}, ease:Quad.easeOut}),30);		
+		//controller.addTween(1100, TweenMax.to($('#competetion_bg'), .2, {css:{top: "0%"}, ease:Quad.easeOut}),30);		
 		$('.info_content').each(function() {
 					controller.addTween(1000, TweenMax.from( $(this), 0.8, {delay:Math.random()*.2,css:{left:Math.random()*1200-600,top:Math.random()*600-300,opacity:0}, ease:Quart.easeOut}),200);
 				});
@@ -94,77 +96,99 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 						]),
 					400 // scroll duration of tween
 				);
-		controller.addTween(2000,TweenMax.to($('#comp_title'), 6, {css:{top: "30%",opacity:1,zIndex:255}, ease:Quad.easeOut}),200);
-		$('#competetions_nav').find('li').each(function() {
+		controller.addTween(2000,TweenMax.to($('#comp_title'), 6, {css:{top: "0%",opacity:1,zIndex:255,scale:0.5}, ease:Quad.easeOut}),200);
+		/*$('#competetions_nav').find('li').each(function() {
 			controller.addTween(2500, TweenMax.to( $(this), Math.random()*.2, {delay:Math.random()*.2,css:{top:"0%",opacity:1}, ease:Quart.easeOut}),200);
-				});		
-		controller.addTween(2700,TweenMax.to($('#comp_title'), 0.6, {css:{top: "130%",opacity:0}, ease:Quad.easeOut}),0);	
+				});		*/
+
+	
+		controller.addTween(2800, (new TimelineLite())
+						.append([
+							 TweenMax.to($('#cat_code'), 0.8, {delay:0,css:{top: "16%",opacity:1}, ease:Quad.easeOut}),
+							 TweenMax.to($('#cat_circuit'), 0.8, {delay:0.2,css:{top: "16%",opacity:1}, ease:Quad.easeOut}),
+							 TweenMax.to($('#cat_robo'), 0.8, {delay:0.4,css:{top: "16%",opacity:1}, ease:Quad.easeOut}),
+							 TweenMax.to($('#cat_mech'), 0.8, {delay:0.6,css:{top: "16%",opacity:1}, ease:Quad.easeOut}),
+							 TweenMax.to($('#cat_other'), 0.8, {delay:0.8,css:{top: "16%",opacity:1}, ease:Quad.easeOut})
+						]),
+					600 // scroll duration of tween
+				);
+				controller.addTween(3800, (new TimelineLite())
+						.append([
+							 TweenMax.to($('#cat_code'), 0.8, {delay:0,css:{top: "120%",opacity:0}, ease:Quad.easeIn}),
+							 TweenMax.to($('#cat_circuit'), 0.8, {delay:0.2,css:{top: "120%",opacity:0}, ease:Quad.easeIn}),
+							 TweenMax.to($('#cat_robo'), 0.8, {delay:0.4,css:{top: "120%",opacity:0}, ease:Quad.easeIn}),
+							 TweenMax.to($('#cat_mech'), 0.8, {delay:0.6,css:{top: "120%",opacity:0}, ease:Quad.easeIn}),
+							 TweenMax.to($('#cat_other'), 0.8, {delay:0.8,css:{top: "120%",opacity:0}, ease:Quad.easeIn}),
+							 TweenMax.to($('#comp_title'), 0.6, {delay:1.8,css:{top: "130%",opacity:0,scale:1}, ease:Quad.easeOut})
+						]),
+					600 // scroll duration of tween
+				);
 		// cat1
-		$('#competetions_list').find('li[rel=1_2]').each(function() {
-			controller.addTween(2800, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
+		/*$('#competetions_list').find('li[rel=1_2]').each(function() {
+			controller.addTween(2800, TweenMax.to( $(this), 0.5, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=1_1]').each(function() {
-					controller.addTween(2800, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
+					controller.addTween(2900, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
 				});	
 		$('#competetions_list').find('li[rel=1_2]').each(function() {
-			controller.addTween(3300, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
+			controller.addTween(3300, TweenMax.to( $(this), 0.4, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=1_1]').each(function() {
-					controller.addTween(3300, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
+					controller.addTween(3300, TweenMax.to( $(this), 0.4, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
 				});	
 		// cat 2
 		$('#competetions_list').find('li[rel=2_2]').each(function() {
-			controller.addTween(3400, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
+			controller.addTween(3400, TweenMax.to( $(this), 0.5, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=2_1]').each(function() {
-					controller.addTween(3400, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
+					controller.addTween(3500, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
 				});	
 		$('#competetions_list').find('li[rel=2_2]').each(function() {
-			controller.addTween(3900, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
+			controller.addTween(3900, TweenMax.to( $(this), 0.4, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=2_1]').each(function() {
-					controller.addTween(3900, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
+					controller.addTween(3900, TweenMax.to( $(this), 0.4, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
 				});	
 		// cat3	
 		$('#competetions_list').find('li[rel=3_2]').each(function() {
-			controller.addTween(4000, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
+			controller.addTween(4000, TweenMax.to( $(this), 0.5, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=3_1]').each(function() {
-					controller.addTween(4000, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
+					controller.addTween(4100, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
 				});	
 		$('#competetions_list').find('li[rel=3_2]').each(function() {
-			controller.addTween(4500, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
+			controller.addTween(4500, TweenMax.to( $(this), 0.4, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=3_1]').each(function() {
-					controller.addTween(4500, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
+					controller.addTween(4500, TweenMax.to( $(this), 0.4, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
 				});	
 		//cat 4
 		$('#competetions_list').find('li[rel=4_2]').each(function() {
-			controller.addTween(4600, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
+			controller.addTween(4600, TweenMax.to( $(this), 0.5, {delay:Math.random()*.2,css:{top:"55%",opacity:1}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=4_1]').each(function() {
-					controller.addTween(4600, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
+					controller.addTween(4700, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"15%",opacity:1}, ease:Quart.easeOut}),0);
 				});	
 		$('#competetions_list').find('li[rel=4_2]').each(function() {
-			controller.addTween(5100, TweenMax.to( $(this), 0.6, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
+			controller.addTween(5100, TweenMax.to( $(this), 0.4, {delay:Math.random()*.2,css:{top:"155%",opacity:0}, ease:Quart.easeOut}),0);
 				});		
 		$('#competetions_list').find('li[rel=4_1]').each(function() {
-					controller.addTween(5100, TweenMax.to( $(this), 0.8, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
+					controller.addTween(5200, TweenMax.to( $(this), 0.4, {delay:Math.random()*.2,css:{top:"150%",opacity:0}, ease:Quart.easeOut}),0);
 				});	
 				$('#competetions_nav').find('li').each(function() {
-		controller.addTween(5300, TweenMax.to( $(this), Math.random()*.2, {delay:Math.random()*.2,css:{top:"-50%",opacity:0}, ease:Quart.easeOut}),0);
-				});		
+		controller.addTween(5400, TweenMax.to( $(this), Math.random()*.2, {delay:Math.random()*.2,css:{top:"-50%",opacity:0}, ease:Quart.easeOut}),0);
+				});		*/
 		controller.addTween(
-					5300,
+					4500,
 					(new TimelineLite())
 						.append([
 							 TweenMax.to($('#half_top'), 0.6, {css:{marginTop: "-1300px",opacity:0}, ease:Quad.easeOut}),
 							 TweenMax.to($('#half_bottom'), 0.6, {css:{marginTop: "1300px",opacity:0}, ease:Quad.easeOut})
 						]),
-					300 // scroll duration of tween
+					400 // scroll duration of tween
 				);
 		controller.addTween(
-					5400,
+					4900,
 					(new TimelineLite())
 						.append([
 							 TweenMax.to($('#thaikkudam_bridge'), 0.6, {css:{top:0,opacity:1}, ease:Quad.easeOut}),
@@ -174,7 +198,7 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 					400 // scroll duration of tween
 				);
 		controller.addTween(
-					6300,
+					5400,
 					(new TimelineLite())
 						.append([
 							 TweenMax.to($('#thaikkudam_bridge'), 0.6, {css:{top:"-120%",opacity:0}, ease:Quad.easeOut}),
@@ -194,7 +218,7 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 						]),
 					400 // scroll duration of tween
 				);*/
-		controller.addTween(6800, TweenMax.to($('#page_contact'), .75, {css:{top: "0%"}, ease:Quad.easeOut}),400);									 
+		controller.addTween(6200, TweenMax.to($('#page_contact'), .75, {css:{top: "0%"}, ease:Quad.easeOut}),400);									 
 	}
 });
 

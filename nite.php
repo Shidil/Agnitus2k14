@@ -35,7 +35,7 @@
 	</article>
 		<article class="nite_item" id="dj_show">
 		<div class="nite_item_loading" style="">
-			<div class="loading"><img src="http://static.zippergaleria.com.br/static/images/exposicoes/loading.gif" alt="">
+			<div class="loading"><img src="images/loading.gif" alt="">
 			</div>
 		</div>
 		<div class="nite_item_details" id="dj_show_details">
@@ -51,7 +51,7 @@
 	</article>
 	<article class="nite_item" id="bandits_stunts">
 		<div class="nite_item_loading" style="">
-			<div class="loading"><img src="http://static.zippergaleria.com.br/static/images/exposicoes/loading.gif" alt="">
+			<div class="loading"><img src="images/loading.gif" alt="">
 			</div>
 		</div>
 		<div class="nite_item_details" id="bandits_stunts_details">
