@@ -7,9 +7,7 @@
 		<div id="header_layer1" class="parallax-layer"></div>
 		<div id="header_layer2" class="parallax-layer"></div>
 		<div id="top_light" class="parallax-layer1"></div>
-		<div id="float_menu">
 
-		</div>
 		<div id="presents_title"></div>
 		<div id="presents_logo">
 			<div id="logo_container">

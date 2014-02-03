@@ -1,7 +1,37 @@
 $(document).ready(function(e) {
 	$('#presents_register').click(function(e){
 		TweenMax.to($('body'), 9, {scrollTop:7000,ease:Linear.easeInOut});
-});
+	});
+	$('#nav_home').click(function(e){
+	var a=(($('body').scrollTop()/7000)*10);
+	if(a<0) a=-a;
+	
+		TweenMax.to($('body'), a, {scrollTop:0,ease:Linear.easeInOut});
+	});
+	$('#nav_about').click(function(e){
+			var a=((($('body').scrollTop()-1280)/7000)*10);
+	if(a<0) a=-a;
+	
+		TweenMax.to($('body'), a, {scrollTop:1280,ease:Linear.easeInOut});
+	});
+	$('#nav_events').click(function(e){
+			var a=((($('body').scrollTop()-3466)/7000)*10);
+	if(a<0) a=-a;
+	
+		TweenMax.to($('body'), a, {scrollTop:3466,ease:Linear.easeInOut});
+	});
+	$('#nav_proshows').click(function(e){
+			var a=((($('body').scrollTop()-5374)/7000)*10);
+	if(a<0) a=-a;
+	
+		TweenMax.to($('body'), a, {scrollTop:5374,ease:Linear.easeInOut});
+	});
+	$('#nav_contact').click(function(e){
+			var a=((($('body').scrollTop()-7000)/7000)*10);
+	if(a<0) a=-a;
+	
+		TweenMax.to($('body'), a, {scrollTop:7000,ease:Linear.easeInOut});
+	});
 });
 $(document).ready(function() {
 $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
@@ -41,7 +71,7 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 	(new TimelineLite({
 			onComplete : initScrollAnimations})).append([
 			TweenMax.to($('#presents_register'), .5, {css:{right: "5%"}, ease:Quad.easeOut}),
-			TweenMax.to($('#presents_facebook'), .5, {css:{left: "5%"}, ease:Quad.easeOut}),
+			TweenMax.to($('#presents_facebook'), .5, {css:{left: "0.5%"}, ease:Quad.easeOut}),
 			TweenMax.to($('#copyright'), .4, {css:{bottom: "0%"}, ease:Quad.easeOut}),
 			TweenMax.to($('#scroll_down'), 0.5,{css : {opacity : '0.7',top : '78%',left : '64%'},ease : Quad.easeOut})
 			]);
@@ -69,7 +99,7 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 	//controller.addTween(140, TweenMax.to($('#presents_title'), .75, {css:{top: -600}, ease:Quad.easeOut}),400);
 	controller.addTween(200, TweenMax.to($('#logo_container'), .9, {css:{top: "-138%"}, ease:Quad.easeOut}),400);
 	controller.addTween(220, TweenMax.to($('#presents_register'), .75, {css:{right: "-38%"}, ease:Quad.easeOut}),200);
-	controller.addTween(220, TweenMax.to($('#presents_facebook'), .75, {css:{left: "-38%"}, ease:Quad.easeOut}),200);
+	//controller.addTween(220, TweenMax.to($('#presents_facebook'), .75, {css:{left: "-38%"}, ease:Quad.easeOut}),200);
 	controller.addTween(300, TweenMax.to($('#page_info'), .7, {css:{top: "0%"}, ease:Quad.easeOut}),400);
 	controller.addTween(
 					550,

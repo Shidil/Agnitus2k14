@@ -48,7 +48,9 @@ function isPage($ip){
 		case 'nite': return 'nite';
 		case 'register': return 'register';
 		case 'contact': return 'contact';
-		default: return '404';
+		default: header('HTTP/1.0 404 Not Found');
+			include('404.html');
+			exit();
 	}
 }
 ?>

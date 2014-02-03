@@ -64,6 +64,13 @@ $(document).ready(function() {
 			$(a).addClass('selected');
 		});
 	});
+	
+	$('#main_nav_container div').on('mouseover',function(){
+		$(this).children().fadeIn(0);
+	});
+	$('#main_nav_container div').on('mouseout',function(){
+		$(this).children().fadeOut(0);
+	});
 });
 $(document).ready(function() {
 	$('#events_tabs li.events_tab').live("click", function(event) {

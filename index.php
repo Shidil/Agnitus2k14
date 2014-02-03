@@ -6,7 +6,7 @@ require_once 'Mobile_Detect.php';
 $detect = new Mobile_Detect;
  
 // Any mobile device (phones or tablets).
-$detect->setUserAgent('BlackBerry7100i/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103');
+//$detect->setUserAgent('BlackBerry7100i/4.1.0 Profile/MIDP-2.0 Configuration/CLDC-1.1 VendorID/103');
 if ( $detect->isMobile() ) 
 {
 	include 'mobile.php';
@@ -36,6 +36,16 @@ width: 100%;"></div>
 		include 'contact.php';
 		//include 'previous.php';
 	?>
+	<div id="main_nav_container">
+		<div id="nav_toggle"><span id="float_menu"></span>
+		</div>
+		<div id="nav_home">H<span>Home</span></div>
+		<div id="nav_about">A<span>About</span></div>
+		<div id="nav_events">E <span>Events</span></div>
+		<div id="nav_proshows">P <span>Pro shows</span></div>
+		<div id="nav_contact">C <span>Contact Us</span></div>
+	
+	</div>
 	<div id="copyright">
 		<span id="copyright_text">© 2014 Agnitus.org</span>
 		<span id="sponsored">Powered by <a href="http://dCitsie.com">dCitsie</a></span>
