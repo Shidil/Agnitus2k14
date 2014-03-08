@@ -15,6 +15,8 @@ function isEvent($item) {
 		return array(2,'ROBOMANIA');
 	} else if (is_dir('events/GENERAL/' . strtoupper($item))) {
 		return array(2,'GENERAL');
+	} else if (is_dir('events/FUN ZONE/' . strtoupper($item))) {
+		return array(2,'FUN ZONE');
 	} else
 		return false;
 
@@ -115,6 +117,9 @@ function printEventList($cat, $page = '1') {
 			</li>
 			<li class="new_nav_item<?php if($item_title=='GENERAL EVENTS') echo ' selected'; ?>" >
 				<a href="<?php echo DOMAIN; ?>events/general">GENERAL EVENTS</a>
+			</li>
+			<li class="new_nav_item<?php if($item_title=='FUN ZONE') echo ' selected'; ?>" >
+				<a href="<?php echo DOMAIN; ?>events/fun-zone">FUN ZONE</a>
 			</li>
 		</ul>
 		

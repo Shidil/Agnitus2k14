@@ -1,8 +1,8 @@
 <?php
 include 'define.php';
 function bbcode($input) {
-	$these = array('[b]', '[/b]', '[br]','[br/]','[li]','[/li]','[p]','[/p]','[img','[/img]','*DOMAIN*');
-	$to = array('<b>', '</b>', '<br>', '<br/>','<li>','</li>','<p>','</p>','<img','/>',DOMAIN);
+	$these = array('[b]', '[/b]', '[br]','[br/]','[li]','[/li]','[p]','[/p]','[img','[/img]','*DOMAIN*','[a','[/a]');
+	$to = array('<b>', '</b>', '<br>', '<br/>','<li>','</li>','<p>','</p>','<img','/>',DOMAIN,'<a','</a>');
 	return (str_replace($these, $to, $input));
 }
 
@@ -37,6 +37,9 @@ if ($_POST) {
 
 			$path = ROOT . 'events/' . $_POST['cat'] . '/' . $_POST['item'];
 			$dpath = 'events/' . $_POST['cat'] . '/' . $_POST['item'];
+			
+			$path=str_replace('\\','',$path);
+			$dpath=str_replace('\\','',$dpath);
 			if (file_exists($path . '/details.html')) {
 				$rules = "";
 				$description = "";

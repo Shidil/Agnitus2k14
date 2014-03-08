@@ -64,12 +64,28 @@ $(document).ready(function() {
 			$(a).addClass('selected');
 		});
 	});
-	
-	$('#main_nav_container div').on('mouseover',function(){
+	var toggled=false;
+	$("#main_nav_container div:not('#nav_toggle')").on('mouseover',function(){
 		$(this).children().fadeIn(0);
 	});
-	$('#main_nav_container div').on('mouseout',function(){
+	$("#main_nav_container div:not('#nav_toggle')").on('mouseout',function(){
 		$(this).children().fadeOut(0);
+	});
+	$('#nav_toggle').on('click',function(){
+		if(!toggled)
+			{
+			$("#main_nav_container div:not('#nav_toggle')").each(function() {
+					TweenMax.to($(this), 0.4, {delay:Math.random()*.2,css:{marginLeft:"-50px"},ease:Quad.easeInOut});
+				});
+				$("#main_nav_container").css("background","rgba(0,0,0,0)");
+				toggled=true;
+				}
+		else
+			{$("#main_nav_container div:not('#nav_toggle')").each(function() {
+			$("#main_nav_container").css("background","rgba(22, 22, 22, 0.84)");
+					TweenMax.to($(this), 0.4, {delay:Math.random()*.2,css:{marginLeft:"0px"},ease:Quad.easeInOut});
+				});
+		toggled=false;}
 	});
 });
 $(document).ready(function() {

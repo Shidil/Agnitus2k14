@@ -123,18 +123,7 @@
 					</div>
 					</footer>
 					<div id="contactlist" style="position: absolute;display: none;">
-						<ul class="contactlist_ul" style="list-style: none;min-height: 145px;">
-							<li class="contactlist_cat">
-								<div class="contactlist_title"><h6>ACCOMODATION</div>
-								<div class="contactlist_item">
-									<b>Athul Raj</b>
-									<p>
-										<br />
-										mobile : 9539537013
-									</p>
-								</div>
-							</li>
-						</ul>
+						<h4>Agnitus 2K14 Team</h4>
 						<ul class="contactlist_ul" style="list-style: none">
 							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>ORGANIZING COMMITTEE</div>
@@ -304,6 +293,104 @@
 									</p>
 								</div>
 							</li>
+							
+						</ul>
+						<h4>Hospitality and Accommodation</h4>
+												<ul class="contactlist_ul" style="list-style: none;min-height: 145px;">
+							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>CHAIRMAN</div>
+								<div class="contactlist_item">
+									<b>Shabin</b>
+									<p>
+										
+										<br />
+										mobile : 8089371038
+									</p>
+								</div>
+							</li>							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>CONVENOR</div>
+								<div class="contactlist_item">
+									<b> Athul Raj</b>
+									<p>
+										
+										<br />
+										mobile : 9539537013
+									</p>
+								</div>
+							</li>
+						</ul>
+						<h4>Event Contacts</h4>
+						<ul class="contactlist_ul" style="list-style: none">
+							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>ME Department</div>
+								<div class="contactlist_item">
+									<b>Department Head</b>
+									<p>
+										Sujith  C<br />
+										mobile : 9567894188
+									</p>
+								</div>
+								<div class="contactlist_item">
+									<b>Department Co-ordinator</b>
+									<p>
+										Amal M<br />
+										mobile : 9744599790
+									</p>
+								</div>
+								
+							</li>							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>EEE Department</div>
+								<div class="contactlist_item">
+									<b>Department Head</b>
+									<p>
+										Vidya Damodaran <br />
+										mobile : 8547166809
+									</p>
+								</div> 
+								<div class="contactlist_item">
+									<b>Department Co-ordinator</b>
+									<p>
+										8547166809<br />
+										mobile : 9744599790
+									</p>
+								</div>
+								
+							</li>							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>ECE Department</div>
+								<div class="contactlist_item">
+									<b>Department Head</b>
+									<p>
+										Anand P M<br />
+										mobile : 9446390632
+									</p>
+								</div>
+								<div class="contactlist_item">
+									<b>Department Co-ordinator</b>
+									<p>
+										Varun B<br />
+										mobile : 9446390632
+									</p>
+								</div>
+								
+							</li>							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>CSE/IT Department</div>
+								<div class="contactlist_item">
+									<b>Department Head</b>
+									<p>
+										Jithin  P<br />
+										mobile : 9605199212
+									</p>
+								</div>
+								<div class="contactlist_item">
+									<b>Department Co-ordinator</b>
+									<p>
+										Praviraj<br />
+										mobile : 8086687321
+									</p>
+								</div>
+								
+							</li>
+							
 							
 						</ul>
 					</div>

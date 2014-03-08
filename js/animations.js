@@ -6,31 +6,31 @@ $(document).ready(function(e) {
 	var a=(($('body').scrollTop()/7000)*10);
 	if(a<0) a=-a;
 	
-		TweenMax.to($('body'), a, {scrollTop:0,ease:Linear.easeInOut});
+		TweenMax.to($('body'), a, {scrollTop:0,ease:Quad.easeInOut});
 	});
 	$('#nav_about').click(function(e){
 			var a=((($('body').scrollTop()-1280)/7000)*10);
 	if(a<0) a=-a;
 	
-		TweenMax.to($('body'), a, {scrollTop:1280,ease:Linear.easeInOut});
+		TweenMax.to($('body'), a, {scrollTop:1280,ease:Quad.easeInOut});
 	});
 	$('#nav_events').click(function(e){
 			var a=((($('body').scrollTop()-3466)/7000)*10);
 	if(a<0) a=-a;
 	
-		TweenMax.to($('body'), a, {scrollTop:3466,ease:Linear.easeInOut});
+		TweenMax.to($('body'), a, {scrollTop:3466,ease:Quad.easeInOut});
 	});
 	$('#nav_proshows').click(function(e){
 			var a=((($('body').scrollTop()-5374)/7000)*10);
 	if(a<0) a=-a;
 	
-		TweenMax.to($('body'), a, {scrollTop:5374,ease:Linear.easeInOut});
+		TweenMax.to($('body'), a, {scrollTop:5374,ease:Quad.easeInOut});
 	});
 	$('#nav_contact').click(function(e){
 			var a=((($('body').scrollTop()-7000)/7000)*10);
 	if(a<0) a=-a;
 	
-		TweenMax.to($('body'), a, {scrollTop:7000,ease:Linear.easeInOut});
+		TweenMax.to($('body'), a, {scrollTop:7000,ease:Quad.easeInOut});
 	});
 });
 $(document).ready(function() {
@@ -70,8 +70,11 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 	function scrollIn(){
 	(new TimelineLite({
 			onComplete : initScrollAnimations})).append([
-			TweenMax.to($('#presents_register'), .5, {css:{right: "5%"}, ease:Quad.easeOut}),
+			TweenMax.to($('#presents_register'), .5, {css:{right: "0%"}, ease:Quad.easeOut}),
+			TweenMax.to($('#presents_media'), .5, {css:{right: "0%"}, ease:Quad.easeOut}),
 			TweenMax.to($('#presents_facebook'), .5, {css:{left: "0.5%"}, ease:Quad.easeOut}),
+			TweenMax.to($('#lucky_draw'), .5, {css:{right: "0.5%"}, ease:Quad.easeOut}),
+			TweenMax.to($('#presents_schedule'), .5, {css:{right: "1%"}, ease:Quad.easeOut}),
 			TweenMax.to($('#copyright'), .4, {css:{bottom: "0%"}, ease:Quad.easeOut}),
 			TweenMax.to($('#scroll_down'), 0.5,{css : {opacity : '0.7',top : '78%',left : '64%'},ease : Quad.easeOut})
 			]);
@@ -93,13 +96,19 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 			triggerAtCenter: false,
 			
 		});
-	///controller.addTween(10, TweenMax.to($('#fireball'), 0.9, {css:{top: "100%",right:"100%",scale:1}, ease:Quad.easeOut}),200);
-	//controller.addTween(10, TweenMax.to($('#cover_top'), .75, {css:{top: -1600}, ease:Quad.easeOut}),1200);
-	//controller.addTween(13, TweenMax.to($('#cover_bottom'), .75, {css:{top: +1600}, ease:Quad.easeOut}),1200);
-	//controller.addTween(140, TweenMax.to($('#presents_title'), .75, {css:{top: -600}, ease:Quad.easeOut}),400);
-	controller.addTween(200, TweenMax.to($('#logo_container'), .9, {css:{top: "-138%"}, ease:Quad.easeOut}),400);
-	controller.addTween(220, TweenMax.to($('#presents_register'), .75, {css:{right: "-38%"}, ease:Quad.easeOut}),200);
-	//controller.addTween(220, TweenMax.to($('#presents_facebook'), .75, {css:{left: "-38%"}, ease:Quad.easeOut}),200);
+		controller.addTween(
+					200,
+					(new TimelineLite())
+						.append([
+							 TweenMax.to($('#logo_container'), .9, {css:{top: "-138%"}, ease:Quad.easeOut}),
+							 TweenMax.to($('#presents_register'), .75, {css:{right: "-38%"}, ease:Quad.easeOut}),
+							 TweenMax.to($('#presents_media'), .75, {delay:0.3,css:{right: "-30%"}, ease:Quad.easeOut}),
+							 TweenMax.to($('#lucky_draw'), .75, {delay:0.3,css:{right: "-30%"}, ease:Quad.easeOut}),
+							 TweenMax.to($('#presents_schedule'), .7, {delay:0.35,css:{right: "-30%"}, ease:Quad.easeOut}),
+							 TweenMax.to($('#copyright'), .75, {css:{bottom: "-10%"}, ease:Quad.easeOut})
+						]),
+					400 // scroll duration of tween
+				);
 	controller.addTween(300, TweenMax.to($('#page_info'), .7, {css:{top: "0%"}, ease:Quad.easeOut}),400);
 	controller.addTween(
 					550,
@@ -221,7 +230,7 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 					4900,
 					(new TimelineLite())
 						.append([
-							 TweenMax.to($('#thaikkudam_bridge'), 0.6, {css:{top:0,opacity:1}, ease:Quad.easeOut}),
+							 TweenMax.to($('#thaikkudam_bridge'), 0.6, {css:{top:"-1px",opacity:1}, ease:Quad.easeOut}),
 							 TweenMax.to($('#bandits_stunts'), 0.6, {css:{top:"50%",opacity:1}, ease:Quad.easeOut}),
 
 						]),
@@ -232,7 +241,7 @@ $("body").queryLoader2({percentage:true,onLoadComplete:titleAnim});
 					(new TimelineLite())
 						.append([
 							 TweenMax.to($('#thaikkudam_bridge'), 0.6, {css:{top:"-120%",opacity:0}, ease:Quad.easeOut}),
-							 TweenMax.to($('#bandits_stunts'), 0.6, {css:{top:0,opacity:1}, ease:Quad.easeOut}),
+							 TweenMax.to($('#bandits_stunts'), 0.6, {css:{top:"-1px",opacity:1}, ease:Quad.easeOut}),
 							 TweenMax.to($('#dj_show'), 0.6, {css:{top:"50%",opacity:1}, ease:Quad.easeOut}),
 
 						]),

@@ -54,12 +54,13 @@ z-index: 55;
 color: #fff;
 font-size: 30px;
 font-family: fantasy;
-width: 400px;
+width: 46%;
 height: 50px;
 position: absolute;
-left: 13%;
-top: 7%;
+left: 146px;
+top: 5%;
 text-align: left;
+line-height: 30px;
 }
 #new_logo{
 

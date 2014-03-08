@@ -17,7 +17,7 @@
 	<div id="bn_logo">
 
 	</div>-->
-	<article class="nite_item" id="thaikkudam_bridge">
+	<article class="nite_item" id="thaikkudam_bridge" style="border-bottom: 1px solid rgb(288, 255, 255);margin:0;">
 		<div class="nite_item_loading" style="">
 			<div class="loading"><img src="http://static.zippergaleria.com.br/static/images/exposicoes/loading.gif" alt="">
 			</div>
@@ -33,7 +33,7 @@
 			</div>
 		</div>
 	</article>
-		<article class="nite_item" id="dj_show">
+		<article class="nite_item" id="dj_show" style="border-bottom: 1px solid rgb(288, 255, 255);margin:0;">
 		<div class="nite_item_loading" style="">
 			<div class="loading"><img src="images/loading.gif" alt="">
 			</div>
@@ -49,12 +49,12 @@
 			</div>
 		</div>
 	</article>
-	<article class="nite_item" id="bandits_stunts">
+	<article class="nite_item" id="bandits_stunts" style="border-bottom: 1px solid rgb(288, 255, 255);background-position-y: 20%;background-size: 102% !important;margin:0;">
 		<div class="nite_item_loading" style="">
 			<div class="loading"><img src="images/loading.gif" alt="">
 			</div>
 		</div>
-		<div class="nite_item_details" id="bandits_stunts_details">
+		<div class="nite_item_details" id="bandits_stunts_details" style="">
 			<div class="title">
 				<h3 class="title-1">Biking Prodigies</h3>
 				<h2 class="title-1">Bandits..</h2>
