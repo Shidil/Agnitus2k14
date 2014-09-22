@@ -1,8 +1,8 @@
 <?php
 include 'define.php';
 function bbcode($input) {
-	$these = array('[b]', '[/b]', '[br/]');
-	$to = array('<b>', '</b>', '<br/>');
+	$these = array('[b]', '[/b]', '[br]','[br/]','[li]','[/li]','[p]','[/p]','[img','[/img]','*DOMAIN*','[a','[/a]');
+	$to = array('<b>', '</b>', '<br>', '<br/>','<li>','</li>','<p>','</p>','<img','/>',DOMAIN,'<a','</a>');
 	return (str_replace($these, $to, $input));
 }
 
@@ -19,13 +19,14 @@ function printEventList($cat) {
 							<article style="width:170px" class="span4 project 2k13gallery" data-tags="celebration,manners" id="gallery_"' . $name1 . ' rel="' . $cat . '">
 							  <div class="img-container-image" rel="' . $name1 . '">
 								<!-- Image -->
-								<img src="events/' . $cat . '/' . $name1 . '/thumb.jpg" alt="" />
+								<img src="<?php echo DOMAIN; ?>events/' . $cat . '/' . $name1 . '/thumb.jpg" alt="" />
 							</li>';
 	}
 }
 
-$rules = "";
+$rules = "<ul>";
 $description = "";
+$format = "";
 $contact = "";
 $title = "";
 $prize = '';
@@ -36,6 +37,9 @@ if ($_POST) {
 
 			$path = ROOT . 'events/' . $_POST['cat'] . '/' . $_POST['item'];
 			$dpath = 'events/' . $_POST['cat'] . '/' . $_POST['item'];
+			
+			$path=str_replace('\\','',$path);
+			$dpath=str_replace('\\','',$dpath);
 			if (file_exists($path . '/details.html')) {
 				$rules = "";
 				$description = "";
@@ -74,6 +78,14 @@ if ($_POST) {
 						$description .= $tag1 -> nodeValue;
 					}
 				}
+				$items = $doc -> getElementsByTagName('format');
+				if (count($items) > 0)//Only if tag1 items are found
+				{
+					foreach ($items as $tag1) {
+						// Do something with $tag1->nodeValue and save your modifications
+						$format .= $tag1 -> nodeValue;
+					}
+				}
 				$items = $doc -> getElementsByTagName('prize');
 				if (count($items) > 0)//Only if tag1 items are found
 				{
@@ -83,8 +95,9 @@ if ($_POST) {
 					}
 				}
 			}
-			$rules = bbcode($rules);
+			$rules = bbcode($rules).'</ul>';
 			$description = bbcode($description);
+			$format = bbcode($format);
 			$contact = bbcode($contact);
 			$prize = bbcode($prize);
 			echo '<div class="lightbox_container">
@@ -93,7 +106,7 @@ if ($_POST) {
 				</div>
 				<div class="lightbox_content">
 					<div class="lightbox_photo">
-						<img src="' . $dpath . '/thumb.jpg" />
+						<img src="' . DOMAIN.$dpath . '/thumb.jpg" />
 					</div>
 					<ul class="lightbox_tabs">
 						<li class="selected" rel="lightbox_description">Description</li>
@@ -103,10 +116,10 @@ if ($_POST) {
 					</ul>
 					<div class="lightbox_details">
 						<div class="lightbox_detail_content">
-							<div id="lightbox_description" class="visible">' . $description . '</div>
-							<div id="lightbox_format" class="hidden">  </div>
-							<div id="lightbox_rules" class="hidden">' . $rules . '</div>
-							<div id="lightbox_contact" class="hidden">' . $contact . '</div>
+							<div id="lightbox_description" class="lightbox_detail_c visible">' . $description . '</div>
+							<div id="lightbox_format" class="lightbox_detail_c hidden"> '.$format.'  </div>
+							<div id="lightbox_rules" class="lightbox_detail_c hidden">' . $rules . '</div>
+							<div id="lightbox_contact" class="lightbox_detail_c hidden">' . $contact . '</div>
 						</div>
 						<div class="lightbox_event_prize"> Prize - ' . $prize . '</div>
 					</div>

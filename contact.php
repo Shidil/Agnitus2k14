@@ -37,12 +37,12 @@
 					<input type="text" class="span6" name="mail" placeholder="E-mail *" value="" id="register_email" />
 					<input type="text" class="span6" name="name" placeholder="Name" value="" id="register_name" />
 					<select class="span6" name="gender" placeholder="Select your gender" id="register_gender" >
-						<option value="other">Select your gender</option>
+						<option value="">Select your gender</option>
 						<option value="male">Male</option>
 						<option value="female">Female</option>
 					</select>
 					<input type="text" class="span6" name="dob" placeholder="Date of birth" value="" id="register_dob" />
-					<input type="text" class="span6" name="phone" placeholder="Contacr Number" value=""id="register_phone"  />
+					<input type="text" class="span6" name="phone" placeholder="Contact Number" value=""id="register_phone"  />
 					<textarea class="span6" style="height:75px;" name="college" placeholder="College Address *" id="register_college" ></textarea>
 					<select class="span6" name="dept" placeholder="Select your department" id="register_dept" >
 						<option value="other">Select your department</option>
@@ -53,8 +53,8 @@
 						<option value="me">Civil</option>
 						<option value="me">Mechanical</option>
 					</select>
-					<select class="span6" name="accom" placeholder="Select Accomodation" id="register_accom" >
-						<option value="other">Accomodation needed?</option>
+					<select class="span6" name="accom" placeholder="Select Accommodation" id="register_accom" >
+						<option value="other">Accommodation needed?</option>
 						<option value="yes">Needed</option>
 						<option value="na">Not needed</option>
 					</select>
@@ -104,12 +104,12 @@
 					<div class="row space80"></div>
 
 					<div class="row">
-					<div class="span12 social-container">
+					<div class="span12 social-container" style="position: absolute;bottom: 1%;left: 22%;">
 					<div class="social-inner">
 					<div class="share-text">
 					<p>Like it? Share it!</p>
 					</div>
-					<div class="social">quiz
+					<div class="social">
 					<a href="#"><i class="icon-facebook a-bounce"></i></a>
 					<a href="#"><i class="icon-twitter a-bounce"></i></a>
 					<a href="#"><i class="icon-google-plus a-bounce"></i></a>
@@ -123,9 +123,10 @@
 					</div>
 					</footer>
 					<div id="contactlist" style="position: absolute;display: none;">
+						<h4>Agnitus 2K14 Team</h4>
 						<ul class="contactlist_ul" style="list-style: none">
 							<li class="contactlist_cat">
-								<div class="contactlist_title"><h6>ORGANIZING COMMITTIE</div>
+								<div class="contactlist_title"><h6>ORGANIZING COMMITTEE</div>
 								<div class="contactlist_item">
 									<b>VICE CHAIRMAN</b>
 									<p>
@@ -163,7 +164,7 @@
 								</div>
 							</li>
 							<li class="contactlist_cat">
-								<div class="contactlist_title"><h6>PROGRAMME COMMITTIE</div>
+								<div class="contactlist_title"><h6>PROGRAMME COMMITTEE</div>
 								<div class="contactlist_item">
 									<b>CHAIRMAN</b>
 									<p>
@@ -201,7 +202,7 @@
 								</div>
 							</li>
 							<li class="contactlist_cat">
-								<div class="contactlist_title"><h6>FINANCE  COMMITTIE</div>
+								<div class="contactlist_title"><h6>FINANCE  COMMITTEE</div>
 								<div class="contactlist_item">
 									<b>CHAIRMAN</b>
 									<p>
@@ -225,7 +226,7 @@
 								</div>
 							</li>
 							<li class="contactlist_cat">
-								<div class="contactlist_title"><h6>PUBLICITY COMMITTIE</div>
+								<div class="contactlist_title"><h6>PUBLICITY COMMITTEE</div>
 								<div class="contactlist_item">
 									<b>CHAIRMAN</b>
 									<p>
@@ -262,7 +263,7 @@
 								</div>
 							</li>
 							<li class="contactlist_cat">
-								<div class="contactlist_title"><h6>SPONSORSHIP COMMITTIE</div>
+								<div class="contactlist_title"><h6>SPONSORSHIP COMMITTEE</div>
 								<div class="contactlist_item">
 									<b>CHAIRMAN</b>
 									<p>
@@ -292,6 +293,104 @@
 									</p>
 								</div>
 							</li>
+							
+						</ul>
+						<h4>Hospitality and Accommodation</h4>
+												<ul class="contactlist_ul" style="list-style: none;min-height: 145px;">
+							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>CHAIRMAN</div>
+								<div class="contactlist_item">
+									<b>Shabin</b>
+									<p>
+										
+										<br />
+										mobile : 8089371038
+									</p>
+								</div>
+							</li>							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>CONVENOR</div>
+								<div class="contactlist_item">
+									<b> Athul Raj</b>
+									<p>
+										
+										<br />
+										mobile : 9539537013
+									</p>
+								</div>
+							</li>
+						</ul>
+						<h4>Event Contacts</h4>
+						<ul class="contactlist_ul" style="list-style: none">
+							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>ME Department</div>
+								<div class="contactlist_item">
+									<b>Department Head</b>
+									<p>
+										Sujith  C<br />
+										mobile : 9567894188
+									</p>
+								</div>
+								<div class="contactlist_item">
+									<b>Department Co-ordinator</b>
+									<p>
+										Amal M<br />
+										mobile : 9744599790
+									</p>
+								</div>
+								
+							</li>							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>EEE Department</div>
+								<div class="contactlist_item">
+									<b>Department Head</b>
+									<p>
+										Vidya Damodaran <br />
+										mobile : 8547166809
+									</p>
+								</div> 
+								<div class="contactlist_item">
+									<b>Department Co-ordinator</b>
+									<p>
+										8547166809<br />
+										mobile : 9744599790
+									</p>
+								</div>
+								
+							</li>							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>ECE Department</div>
+								<div class="contactlist_item">
+									<b>Department Head</b>
+									<p>
+										Anand P M<br />
+										mobile : 9446390632
+									</p>
+								</div>
+								<div class="contactlist_item">
+									<b>Department Co-ordinator</b>
+									<p>
+										Varun B<br />
+										mobile : 9446390632
+									</p>
+								</div>
+								
+							</li>							<li class="contactlist_cat">
+								<div class="contactlist_title"><h6>CSE/IT Department</div>
+								<div class="contactlist_item">
+									<b>Department Head</b>
+									<p>
+										Jithin  P<br />
+										mobile : 9605199212
+									</p>
+								</div>
+								<div class="contactlist_item">
+									<b>Department Co-ordinator</b>
+									<p>
+										Praviraj<br />
+										mobile : 8086687321
+									</p>
+								</div>
+								
+							</li>
+							
 							
 						</ul>
 					</div>

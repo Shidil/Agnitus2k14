@@ -1,0 +1,62 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	overflow:hidden;
+}
+#wrapper{
+	background:#141414;
+	width:100%;
+	min-height:100%;
+}
+#home{
+	/*min-height: 575px;*/
+	height:100%;
+}
+.logo,.register{
+	text-align:center;
+}
+.logo img{
+	width: 85%;
+	max-width: 407px;
+	height: auto;
+	margin-left: -3%;
+	margin-top: 8%;
+}
+.register img{
+	width: 60%;
+	max-width: 265px;
+	height: auto;
+	margin-left: 3%;
+	margin-top: 35px;
+}
+#events{
+height: 70px;
+font-size: 17pt;
+background: url(../images/right.png) no-repeat right;
+background-position-x: 95%;
+background-color: #3A3A3A;
+color: #FFFFFF;
+line-height: 70px;
+text-indent: 4%;
+}
+#register{
+height: 70px;
+font-size: 17pt;
+background: url(../images/right.png) no-repeat right;
+background-position-x: 95%;
+background-color: #DF315B;
+color: #F5F5F5;
+line-height: 70px;
+text-indent: 4%;
+}
+
+#contact{
+height: 70px;
+font-size: 17pt;
+background: url(../images/right.png) no-repeat right;
+background-position-x: 95%;
+background-color: #27DAA7;
+color: #FFFFFF;
+line-height: 70px;
+text-indent: 4%;
+}

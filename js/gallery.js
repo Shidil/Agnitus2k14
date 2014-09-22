@@ -3,20 +3,27 @@
  * 	ajax lightbox
  */
 $(document).ready(function() {
-	$("html").niceScroll({styler:"fb",cursorcolor:"#000"});
-	
+	$("html").niceScroll({styler:"fb",cursorcolor:"#000",scrollspeed:60,mousescrollstep:24,preservenativescrolling:true,cursorminheight:30,
+	autohidemode:false,cursorcolor:"#2B2E2E",cursorwidth:4,cursorborder:"1px solid #A2A2A2",cursorborderradius:3,spacebarenabled:false,cursorminheight:70,
+	snapbackspeed: 80,usetransition: true});
+	$("#competetions_list").niceScroll({styler:"fb",cursorcolor:"#000",scrollspeed:60,mousescrollstep:24,preservenativescrolling:true,cursorminheight:30,
+	autohidemode:false,cursorcolor:"#2B2E2E",cursorwidth:4,cursorborder:"1px solid #A2A2A2",cursorborderradius:3,spacebarenabled:false,cursorminheight:70,
+	snapbackspeed: 80,usetransition: true});
+	$('#new_scroll_down').click(function(e){
+		TweenMax.to($('#competetions_list'), 1, {scrollTop:400,ease:Quad.easeInOut});
+	});
 });
 $(document).ready(function() {
 	jQuery('.2k13gallery div').on("click", function(event) {
-
+	$('#timeline_overlay').addClass('active');
 		var rel = $(this).attr('rel');
 		var prel = $(this).parent().attr('rel');
-		$.post("ajax.php", {
+		$.post(ajaxUrl+"ajax.php", {
 			type : "event",
 			item : rel,
 			cat : prel
 		}).done(function(data) {
-
+		$('#timeline_overlay').removeClass('active');
 			$.fancybox(this,{
 				helpers : {
 					overlay : {
@@ -34,13 +41,15 @@ $(document).ready(function() {
 				width : '1100px',
 				height : '500px%',
 				autoSize : false,
-				closeClick : false,
 				openEffect : 'elastic',
 				closeEffect : 'elastic',
 				content : data
 			});
 			$("#lightbox_description").niceScroll({styler:"fb",cursorcolor:"#000"});
-		});
+		}).fail(function() {
+					alert( "There was an error completing your request. please check your connection and try again." );
+					$('#timeline_overlay').removeClass('active');
+				});
 	});
 });
 $(document).ready(function() {
@@ -54,6 +63,29 @@ $(document).ready(function() {
 			$('#' + id).fadeIn("slow");
 			$(a).addClass('selected');
 		});
+	});
+	var toggled=false;
+	$("#main_nav_container div:not('#nav_toggle')").on('mouseover',function(){
+		$(this).children().fadeIn(0);
+	});
+	$("#main_nav_container div:not('#nav_toggle')").on('mouseout',function(){
+		$(this).children().fadeOut(0);
+	});
+	$('#nav_toggle').on('click',function(){
+		if(!toggled)
+			{
+			$("#main_nav_container div:not('#nav_toggle')").each(function() {
+					TweenMax.to($(this), 0.4, {delay:Math.random()*.2,css:{marginLeft:"-50px"},ease:Quad.easeInOut});
+				});
+				$("#main_nav_container").css("background","rgba(0,0,0,0)");
+				toggled=true;
+				}
+		else
+			{$("#main_nav_container div:not('#nav_toggle')").each(function() {
+			$("#main_nav_container").css("background","rgba(22, 22, 22, 0.84)");
+					TweenMax.to($(this), 0.4, {delay:Math.random()*.2,css:{marginLeft:"0px"},ease:Quad.easeInOut});
+				});
+		toggled=false;}
 	});
 });
 $(document).ready(function() {
@@ -74,7 +106,10 @@ $(document).ready(function() {
 });
 $(document).ready(function() {
 	$('#register_dob').datepick({
-		dateFormat : 'dd-mm-yyyy'
+		dateFormat : 'dd-mm-yyyy',
+		minDate: new Date(1970, 1 - 1, 31), 
+		maxDate: new Date(1999, 1 - 1, 31),
+		yearRange: 'c-15:c+15'
 	});
 });
 $(document).ready(function() {
@@ -107,7 +142,9 @@ event.preventDefault();
 	});
 });
 $(document).ready(function() {
+	
 	$('#register_button').on("click", function(event) {
+	
 		var email1 = $('#register_email').val();
 		var phone1 = $('#register_phone').val();
 		var name1 = $('#register_name').val();
@@ -117,9 +154,10 @@ $(document).ready(function() {
 		var dept1 = $('#register_dept').val();
 		var accom1 = $('#register_accom').val();
 		if (email1 && phone1 && name1 && dob1 && gender1 && college1 && dept1 && accom1) {
-			if (!phone1 == parseInt(phone1)) {
+			if (!(phone1 == parseInt(phone1)) || (phone1.length!=10)) {
 				regFail('Invalid Phone Number');
 			} else {
+			$('#timeline_overlay').addClass('active');
 				$('register_loading').fadeIn('slow');
 				$.post("ajax.php", {
 					type : "register",
@@ -132,11 +170,15 @@ $(document).ready(function() {
 					dept : dept1,
 					accom : accom1,
 				}).done(function(data) {
+				$('#timeline_overlay').removeClass('active');
 					if (data == "true")
 						regSuccess('Thanks for registering');
 					else {
 						regFail('Please check values and try again.');
 					}
+				}).fail(function() {
+					alert( "There was an error completing your request. please check your connection and try again." );
+					$('#timeline_overlay').removeClass('active');
 				});
 			}
 		} else {
