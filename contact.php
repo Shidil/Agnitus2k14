@@ -130,22 +130,22 @@
 								<div class="contactlist_item">
 									<b>VICE CHAIRMAN</b>
 									<p>
-										ANIL RAJAGOPAL K P<br />
-										mobile : 9495427200
+										AAAAAAAAA<br />
+										mobile : 99999999
 									</p>
 								</div>
 								<div class="contactlist_item">
 									<b>GENERAL CONVENOR</b>
 									<p>
-										YADHUNADH T.P<br />
-										mobile : 9995524949
+										YYYYYYYYY<br />
+										mobile : 99999999
 									</p>
 								</div>
 								<div class="contactlist_item">
 									<b>CONVENOR</b>
 									<p>
-										SUMESH C<br />
-										mobile : 9895070237
+										ZZZZZZZZZ<br />
+										mobile : 222222222=
 									</p>
 								</div>
 								<div class="contactlist_item">
@@ -158,140 +158,28 @@
 								<div class="contactlist_item">
 									<b>JOINT CONVENOR</b>
 									<p>
-										ATHUL S<br />
-										mobile : 8089748595
+										KKKKKKK S<br />
+										mobile : 77777777
 									</p>
 								</div>
 							</li>
 							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>PROGRAMME COMMITTEE</div>
-								<div class="contactlist_item">
-									<b>CHAIRMAN</b>
-									<p>
-										ANIL RAJAGOPAL K P<br />
-										mobile : 9495427200
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>CONVENOR</b>
-									<p>
-										ANAS T K A<br />
-										mobile : 9497295295
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>JOINT CONVENOR</b>
-									<p>
-										ARSHAD<br />
-										mobile : 8129183405
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>JOINT CONVENOR</b>
-									<p>
-										ARJUN A K<br />
-										mobile : 9567355014
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>JOINT CONVENOR</b>
-									<p>
-										ANJALI JAYARAJ<br />
-										mobile : 
-									</p>
-								</div>
+								
+							
 							</li>
 							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>FINANCE  COMMITTEE</div>
 								<div class="contactlist_item">
-									<b>CHAIRMAN</b>
-									<p>
-										CHAMPAK KUMAR<br />
-										mobile : 9447218649
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>CONVENOR</b>
-									<p>
-										SUMESH C<br />
-										mobile : 9895070237
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>JOINT CONVENOR</b>
-									<p>
-										DHANESH M<br />
-										mobile : 9895649853
-									</p>
-								</div>
+									
 							</li>
 							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>PUBLICITY COMMITTEE</div>
-								<div class="contactlist_item">
-									<b>CHAIRMAN</b>
-									<p>
-										RANJITH K<br />
-										mobile : 9447739802
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>CONVENOR</b>
-									<p>
-										VAISHAKH B K<br />
-										mobile : 9946340802
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>JOINT CONVENOR</b>
-									<p>
-										HARI KASYAP RAJ K<br />
-										mobile : 9497300472
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>JOINT CONVENOR</b>
-									<p>
-										VAISHAKH O K<br />
-										mobile : 9633220362
-									</p>
-								</div>								<div class="contactlist_item">
-									<b>JOINT CONVENOR</b>
-									<p>
-										ATHULYA M NAMBIAR<br />
-										mobile : 
-									</p>
-								</div>
+								
 							</li>
 							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>SPONSORSHIP COMMITTEE</div>
-								<div class="contactlist_item">
-									<b>CHAIRMAN</b>
-									<p>
-										SHIHABUDHEEN<br />
-										mobile : 9400268086
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>CONVENOR</b>
-									<p>
-										SAJIN C<br />
-										mobile : 9746198776
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>JOINT CONVENOR</b>
-									<p>
-										SHANTHIKUMAR<br />
-										mobile : 7293646756
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>JOINT CONVENOR</b>
-									<p>
-										MOHAMMED ZAIN<br />
-										mobile : 9633039305
-									</p>
-								</div>
+								
 							</li>
 							
 						</ul>
@@ -299,95 +187,29 @@
 												<ul class="contactlist_ul" style="list-style: none;min-height: 145px;">
 							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>CHAIRMAN</div>
-								<div class="contactlist_item">
-									<b>Shabin</b>
-									<p>
-										
-										<br />
-										mobile : 8089371038
-									</p>
-								</div>
+								
 							</li>							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>CONVENOR</div>
-								<div class="contactlist_item">
-									<b> Athul Raj</b>
-									<p>
-										
-										<br />
-										mobile : 9539537013
-									</p>
-								</div>
+								
 							</li>
 						</ul>
 						<h4>Event Contacts</h4>
 						<ul class="contactlist_ul" style="list-style: none">
 							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>ME Department</div>
-								<div class="contactlist_item">
-									<b>Department Head</b>
-									<p>
-										Sujith  C<br />
-										mobile : 9567894188
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>Department Co-ordinator</b>
-									<p>
-										Amal M<br />
-										mobile : 9744599790
-									</p>
-								</div>
+								
 								
 							</li>							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>EEE Department</div>
-								<div class="contactlist_item">
-									<b>Department Head</b>
-									<p>
-										Vidya Damodaran <br />
-										mobile : 8547166809
-									</p>
-								</div> 
-								<div class="contactlist_item">
-									<b>Department Co-ordinator</b>
-									<p>
-										8547166809<br />
-										mobile : 9744599790
-									</p>
-								</div>
+								
 								
 							</li>							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>ECE Department</div>
-								<div class="contactlist_item">
-									<b>Department Head</b>
-									<p>
-										Anand P M<br />
-										mobile : 9446390632
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>Department Co-ordinator</b>
-									<p>
-										Varun B<br />
-										mobile : 9446390632
-									</p>
-								</div>
+								
 								
 							</li>							<li class="contactlist_cat">
 								<div class="contactlist_title"><h6>CSE/IT Department</div>
-								<div class="contactlist_item">
-									<b>Department Head</b>
-									<p>
-										Jithin  P<br />
-										mobile : 9605199212
-									</p>
-								</div>
-								<div class="contactlist_item">
-									<b>Department Co-ordinator</b>
-									<p>
-										Praviraj<br />
-										mobile : 8086687321
-									</p>
-								</div>
+								
 								
 							</li>
 							
